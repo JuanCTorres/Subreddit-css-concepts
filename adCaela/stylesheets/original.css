@@ -1,0 +1,84 @@
+body {
+    font-family: -apple-system, sans-serif;
+}
+
+.title {
+    margin: 1rem;
+}
+
+.sitetable {
+    overflow: hidden;
+}
+
+/* Comment boxes, side boxes (do not do .content by itself)  */
+.thing, ul.content, div.titlebox {
+    border: none !important;
+    box-shadow: 5px 5px 15px 0px rgba(46,61,73,0.2);
+    border-radius: 0.375rem;
+    padding: 1rem !important;
+    margin: 1rem !important;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Sidebar items (moderator stuff, for instance)  */
+ul.content li {
+    margin: .8em;
+}
+
+.sidecontentbox .content {
+    margin-top: .8rem;
+    margin-bottom: .8rem;
+}
+
+/* search expando, etc. */
+.infobar {
+    border: none;
+    box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.2);
+    border-radius: .375rem;
+    padding: 1rem !important;
+    margin: 1rem !important;
+
+}
+
+/* Img. thumbnail  */
+.thing a.thumbnail {
+    
+}
+
+.link .usertext-body .md {
+    background-color: #f9f9f9;
+    border-radius: .375rem;
+    padding: 1rem;
+    margin: 1rem;
+    border: none;
+}
+
+.RES-keyNav-activeElement {
+    border-radius: .375rem !important;
+    padding: 0.5rem !important;
+}
+
+/* Submit new links button  */
+.morelink {
+    border: none;
+    border-radius: .375rem;
+    box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.2);
+    margin: 1rem;
+    padding: 1rem;
+    background-image: none;
+    letter-spacing: 0;
+    position: inherit !important;
+}
+
+.morelink:hover {
+    border-color: none;
+    background-image: none;
+    color: inherit; 
+}
+
+.morelink:hover a {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px)

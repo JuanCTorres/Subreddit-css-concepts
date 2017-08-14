@@ -1,0 +1,381 @@
+/**
+ * Inspiration taken from: Udacity.com
+ * (for boxes, shadows, color scheme)
+ *
+ */
+
+// Not allowed in subreddit css files
+//@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+$body-font-stack: "Open Sans", -apple-system, sans-serif;
+$code-font-stack: menlo, monaco, monospace;
+
+$title-color: black;
+$title-visited-color: darkgray;
+$main-color: #02ccba;
+$alert-color: #F04546;
+$main-text-color: #525c65;
+
+$main-shadow: 5px 5px 15px 0 rgba(46, 61, 73, 0.2);
+$hover-shadow: 3px 5px 8px 0px rgba(46, 61, 73, 0.15); // TODO change? Differentiate from hover-shadow?
+$select-shadow: 3px 5px 8px 0px rgba(46, 61, 73, 0.5);
+$lighten-shadow: 0 0 0 3px rgba(255,255,255,.3);
+$shadow-transition: all 0.5s ease;
+
+$main-border-radius: 0.375rem;
+$button-border-radius: 0.25rem;
+$background-white: white;
+
+body {
+  font-family: $body-font-stack !important;
+  // font smoothing not supported, apparently.
+  //-webkit-font-smoothing: antialiased;
+  //-moz-osx-font-smoothing: grayscale;
+}
+
+// Replace most links' color for black
+// See also .thing .title { }
+a {
+
+  &.title {
+    color: $title-color
+  }
+
+  color: $main-text-color;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.sidecontentbox {
+  // Put a margin on titles to align them with the various sidebar boxes. Only for those titles; otherwise,
+  // creates a weird-looking margin on link titles.
+  .title {
+    margin: 1rem;
+  }
+}
+
+.sitetable {
+  overflow: hidden;
+}
+
+/* Comment boxes, side boxes (do not do .content by itself)  */
+.thing, ul.content, div.titlebox {
+  border: none !important;
+  box-shadow: $main-shadow;
+  border-radius: $main-border-radius;
+  padding: 1rem !important;
+  margin: 1rem !important;
+  position: relative;
+  overflow: hidden;
+  transition: $shadow-transition;
+
+  &:hover {
+    box-shadow: $hover-shadow;
+  }
+
+  & .title {
+    color: $title-color !important;
+  }
+
+  & .title:visited {
+    color: $title-visited-color !important;
+  }
+}
+
+/* Sidebar items (moderator stuff, for instance)  */
+ul.content li {
+  margin: .8em;
+}
+
+.sidecontentbox .content {
+  margin-top: .8rem;
+  margin-bottom: .8rem;
+}
+
+/*
+ * Subscribe, shortcut, dashboard buttons
+ */
+
+// The a element inside is necessary for the subscribe/unsubscribe button,
+// which has the styling applied to an <a> element inside the <span>
+.fancy-toggle-button a, .res-fancy-toggle-button {
+  -webkit-box-shadow: $main-shadow;
+  -moz-box-shadow: $main-shadow;
+  box-shadow: $main-shadow;
+  border: none !important;
+  background-image: none;
+  font-weight: normal;
+  background: $main-color;
+  padding: 1em !important;
+  -webkit-border-radius: $button-border-radius !important;
+  -moz-border-radius: $button-border-radius !important;
+  border-radius: $button-border-radius !important;
+  margin: 2px; // looks better with centered buttons (see div.subButtons)
+
+  &.subscribe-button {
+    //background: red;
+  }
+
+  &.remove, & a.remove {
+    background: $alert-color !important;
+  }
+  //& a {
+  //  border: none !important;
+  //}
+}
+
+.titlebox div.subButtons {
+  display: table; // for centering
+  margin: auto;
+}
+
+.fancy-toggle-button {
+
+}
+
+.res-fancy-toggle-button
+  /* search expando, etc. */
+.infobar {
+  border: none;
+  box-shadow: $main-shadow;
+  border-radius: $main-border-radius;
+  padding: 1rem !important;
+  margin: 1rem !important;
+  line-height: 2em;
+
+  label {
+    display: inline-block !important; // ignores the br after the p element that makes things look weird
+  }
+
+  // padding around the border for #moresearchinfo
+  :nth-child(4) {
+    padding-bottom: 1rem;
+  }
+
+  #moresearchinfo {
+    padding-top: 1rem;
+  }
+}
+
+/* Img. thumbnail  */
+.thing a.thumbnail {
+
+}
+
+.link .usertext-body .md {
+  background-color: #f9f9f9;
+  border-radius: .375rem;
+  padding: 1rem;
+  margin: 1rem;
+  border: none;
+}
+
+.RES-keyNav-activeElement {
+  border-radius: $main-border-radius !important;
+  padding: 0.5rem !important;
+}
+
+/* Submit new links buttons */
+
+.side {
+  &>.spacer:nth-of-type(2), .spacer:nth-of-type(3) {
+    background: linear-gradient(
+                    60deg,
+                    #f79533, #f37055, #ef4e7b, #a166ab,
+                    #5073b8, #1098ad, #07b39b, #6fba82
+    );
+    margin: 1rem;
+    padding: 1rem;
+    -webkit-box-shadow: $main-shadow;
+    -moz-box-shadow: $main-shadow;
+    box-shadow: $main-shadow;
+    -webkit-border-radius: $main-border-radius;
+    -moz-border-radius: $main-border-radius;
+    border-radius: $main-border-radius;
+  }
+  & .submit .morelink {
+    margin: -13px;
+    -webkit-box-shadow: $lighten-shadow;
+    -moz-box-shadow: $lighten-shadow;
+    box-shadow: $lighten-shadow;
+  }
+}
+
+.morelink {
+  border: none;
+  border-radius: $main-border-radius;
+  box-shadow: $main-shadow;
+  // normally, 1rem, for the gradient button, the idea is to have a very thin margin
+  // see .side .submit .morelink
+  margin: 1rem;
+  padding: 1rem;
+  background-image: none;
+  letter-spacing: 0;
+  position: inherit !important;
+}
+
+.morelink:hover {
+  border: none;
+  background-image: none;
+}
+
+.morelink:hover a {
+  text-decoration: underline;
+  color: black;
+}
+
+body > .content .link .midcol, .midcol-spacer {
+  line-height: 1.6rem;
+}
+
+// search
+#search {
+  input[type=text] {
+    font-family: $body-font-stack;
+    border: none;
+    padding: 1rem;
+    margin: 1rem;
+    width: 268px;
+    -webkit-border-radius: $main-border-radius;
+    -moz-border-radius: $main-border-radius;
+    border-radius: $main-border-radius;
+    -webkit-box-shadow: $main-shadow;
+    -moz-box-shadow: $main-shadow;
+    box-shadow: $main-shadow;
+  }
+
+  // search thumbnail img overflows to the right
+  input[type=submit] {
+    margin-left: -45px;
+  }
+}
+
+/* Vertically align upvote buttons, score, post rank.
+ * floats do no align: change them to display: inline-block
+ */
+
+.sitetable {
+  .link .rank, .thumbnail, .midcol {
+    float: none;
+    vertical-align: middle;
+  }
+
+  // both <div> and <a> because the thumbnail is just an <a> element not wrapped in a <div>
+  .link > div, .link > a, .link > span {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  span.rank, .midcol, .thumbnail {
+    padding: 1rem;
+  }
+
+  .thumbnail.spoiler {
+    // Helps with the sizing of the comment/link/sprites, which by default are set to 70px for some reason.
+    background-size: cover;
+  }
+}
+
+// For now, long links expand and move the thumbnail image to a new line. Not sure how to fix that other
+// than to set a max width for now. TODO might do a media rule for different screen sizes, since it looks weird on
+// wide screens now
+.sitetable .entry {
+  width: 1000px;
+}
+
+/* Header */
+
+#header {
+  background-image: linear-gradient(to bottom right, #02b3e4, #02ccba);
+  border-bottom: none;
+}
+
+#header {
+  border: none;
+  height: 225px;
+  transition: 300ms;
+  -webkit-transition: 300ms;
+}
+
+#header-img {
+  margin-top: 34px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#header-bottom-left .tabmenu {
+  background-color: transparent;
+  text-align: left;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 156px;
+  padding-left: 15px;
+}
+
+span.pagename.redditname a {
+  display: block;
+  width: 400px;
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 68px;
+  left: 95px;
+}
+
+.pagename a {
+  height: 100px;
+  width: 200px;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.tabmenu {
+  li {
+    text-transform: uppercase;
+    margin: 0;
+
+    a {
+      padding: 0 20px !important;
+      border: none;
+      background-color: $background-white;
+      display: inline-block;
+      line-height: 48px;
+      text-align: center;
+      text-transform: Uppercase;
+      font-weight: normal;
+      //color: #e5e5e5 !important;
+      //text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5)
+      -webkit-border-radius: $button-border-radius;
+      -moz-border-radius: $button-border-radius;
+      border-radius: $button-border-radius;
+      margin-right: 1rem;
+      -webkit-box-shadow: $main-shadow;
+      -moz-box-shadow: $main-shadow;
+      box-shadow: $main-shadow;
+      transition: $shadow-transition;
+    }
+
+    // top bar tabs (filter, wiki, gilded, etc.)
+    & a.choice:hover, &.res-tabmenu-button a:hover {
+      -webkit-box-shadow: $select-shadow;
+      -moz-box-shadow: $select-shadow;
+      box-shadow: $select-shadow;
+    }
+  }
+
+  li.selected {
+    // by default, reddit's css uses borders to show the current tab
+    a {
+      border: none;
+    }
+  }
+}
+
+code {
+  font-family: $code-font-stack !important;
+}
+

@@ -1,0 +1,2955 @@
+/* === start: rotating banner === */
+
+.side {
+    position: relative;
+    padding-top: 225px; /*change here to the height of the images*/
+    margin-top:110px;
+}
+
+.side > .spacer:after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    top: -2px;
+    width: 300px;
+    height: 225px;            /*change here to the height of the images*/
+    border: 1px solid #222;
+    background-size: cover;
+    opacity: 0;
+    -webkit-animation: banner1 40s linear infinite;
+    animation: banner1 40s linear infinite;
+}
+
+.side > .spacer:nth-child(5):after {
+    opacity: 1;
+    z-index: 1;
+    background-image: url(%%banner1%%);
+}
+.side > .spacer:nth-child(4):after {
+    background-image: url(%%banner2%%);
+    -webkit-animation-name: banner2;
+    animation-name: banner2;
+}
+.side > .spacer:nth-child(3):after {
+    background-image: url(%%banner3%%);
+    -webkit-animation-name: banner3;
+    animation-name: banner3;
+}
+.side > .spacer:nth-child(2):after {
+    background-image: url(%%banner4%%);
+    -webkit-animation-name: banner4;
+    animation-name: banner4;
+}
+.side > .spacer:nth-child(1):after {
+    background-image: url(%%banner5%%);
+    -webkit-animation-name: banner5;
+    animation-name: banner5;
+}
+
+@keyframes banner1 {
+    16%{opacity:1} 20%{opacity:0;z-index:1} 21%{z-index:0} 95%{z-index:0} 96%{opacity:0;z-index:1}
+}
+@keyframes banner2 {
+    16%{opacity:0;z-index:1} 20%{opacity:1} 36%{opacity:1} 40%{opacity:0;z-index:1} 41%{z-index:0}
+}
+@keyframes banner3 {
+    36%{opacity:0;z-index:1} 40%{opacity:1} 56%{opacity:1} 60%{opacity:0;z-index:1} 61%{z-index:0}
+}
+@keyframes banner4 {
+    56%{opacity:0;z-index:1} 60%{opacity:1} 76%{opacity:1} 80%{opacity:0;z-index:1} 81%{z-index:0}
+}
+@keyframes banner5 {
+    1%{z-index:0} 76%{opacity:0;z-index:1} 80%{opacity:1} 96%{opacity:1} 100%{opacity:0;z-index:1}
+}
+
+@-webkit-keyframes banner1 {
+    16%{opacity:1} 20%{opacity:0;z-index:1} 21%{z-index:0} 95%{z-index:0} 96%{opacity:0;z-index:1}
+}
+@-webkit-keyframes banner2 {
+    16%{opacity:0;z-index:1} 20%{opacity:1} 36%{opacity:1} 40%{opacity:0;z-index:1} 41%{z-index:0}
+}
+@-webkit-keyframes banner3 {
+    36%{opacity:0;z-index:1} 40%{opacity:1} 56%{opacity:1} 60%{opacity:0;z-index:1} 61%{z-index:0}
+}
+@-webkit-keyframes banner4 {
+    56%{opacity:0;z-index:1} 60%{opacity:1} 76%{opacity:1} 80%{opacity:0;z-index:1} 81%{z-index:0}
+}
+@-webkit-keyframes banner5 {
+    1%{z-index:0} 76%{opacity:0;z-index:1} 80%{opacity:1} 96%{opacity:1} 100%{opacity:0;z-index:1}
+}
+
+/* ==== end: rotating banner ==== */
+
+/*Optional- adds a caption under that image*/
+
+div.side div.spacer:nth-of-type(1):before{
+    display:block;
+    margin-top:-5px;
+    width:300px;
+
+    content:"James Rodriguez & Tolisso join Bayern";
+    padding:0px 0 10px;
+
+    text-align:center;
+    font-family: Georgia, serif;
+    font-size: 11pt;
+    /*background-color: grey;*/
+
+}
+
+
+/* Stadium Side*/
+
+@media (min-width: 1400px) {
+    html {
+        background: #ffffff;
+        padding: 0px 50px;
+        min-width: 980px;
+    }
+    body {
+        background: #fff;
+        box-shadow: 0 0 16px #000;
+        margin: 0 auto;
+    }
+
+    body:before,
+    body:after{
+        content: "";
+        width: 50px;
+        height: 100%;
+        position: fixed;
+        z-index:-1;
+        top: 0;
+        right: 0;
+        background: url(%%side%%) no-repeat 0 0;
+        background-position: -255px 0;
+    }
+
+    body:before{
+        left:0;
+        background: url(%%side%%) no-repeat 0 0;
+        background-position: -75px 0;
+    }
+
+}
+
+@media (min-width: 1600px) {
+    html {
+        padding: 0px 65px;
+    }
+
+    body:before,
+    body:after{
+        width: 65px;
+        background: url(%%side%%) no-repeat 0 0;
+        background-position: -190px 0;
+    }
+
+    body:before{
+        background: url(%%side%%) no-repeat 0 0;
+        background-position: -125px 0;
+    }
+
+}
+
+
+@media (min-width: 1900px) {
+    html {
+
+        padding: 0px 75px;
+    }
+
+    body:before,
+    body:after{
+        width: 75px;
+        background: url(%%side%%) no-repeat 0 0;
+        background-position: -305px 0;
+    }
+
+    body:before{
+        background: url(%%side%%) no-repeat 0 0
+    }
+
+}
+
+/*header picture*/
+
+
+#header, .res-nightmode #header {
+    background: #fff url(%%a7%%) no-repeat 100px 0px;
+
+    height: 190px;
+}
+
+@media (min-width: 1300px) {
+    #header, .res-nightmode #header  {
+        background: #fff url(%%a9%%) no-repeat 100px 0px; height: 190px;}
+}
+
+@media (min-width: 1400px) {
+    #header, .res-nightmode #header  {
+        background: #fff url(%%a7%%) no-repeat 100px 0px; height: 190px;}
+}
+
+@media (min-width: 1450px) {
+    #header, .res-nightmode #header  {
+        background: #fff url(%%a10%%) no-repeat 100px 0px; height: 190px;}
+}
+
+@media (min-width: 1550px) {
+    #header, .res-nightmode #header  {
+        background: #fff url(%%a12%%) no-repeat 100px 0px; height: 190px;}
+}
+
+@media (min-width: 1600px) {
+    #header, .res-nightmode #header  {
+        background: #fff url(%%a12%%) no-repeat 100px 0px; height: 190px;}
+}
+
+@media (min-width: 1650px) {
+    #header, .res-nightmode #header  {
+        background: #fff url(%%a15%%) no-repeat 100px 0px; height: 190px;}
+}
+
+@media (min-width: 1750px) {
+    #header, .res-nightmode #header  {
+        background: #fff url(%%a17%%) no-repeat 100px 0px; height: 190px;}
+}
+
+@media (min-width: 1850px) {
+    #header, .res-nightmode #header  {
+        background: #fff url(%%a18%%) no-repeat 100px 0px; height: 190px;}
+}
+
+@media (min-width: 1900px) {
+    #header, .res-nightmode #header  {
+        background: #fff url(%%a19%%) no-repeat 100px 0px; height: 190px;}
+}
+
+@media (min-width: 2000px) {
+    #header, .res-nightmode #header  {
+        background: #fff url(%%a21%%) no-repeat 100px 0px; height: 190px;}
+}
+
+@media (min-width: 2100px) {
+    #header, .res-nightmode #header  {
+        background: #fff url(%%a22%%) no-repeat 100px 0px; height: 190px;}
+}
+
+@media (min-width: 2150px) {
+    #header, .res-nightmode #header  {
+        background: #fff url(%%a23%%) no-repeat 100px 0px; height: 190px;}
+}
+
+/*Pagename*/
+
+.pagename {
+    position: absolute ;
+    top: 183px;
+    left: 17px;
+    z-index: 502;
+    color: #fff;
+    /* font-family: Georgia, "Times New Roman", serif; */
+    font-size:90%;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    display:block;
+    font-variant: normal;
+    letter-spacing:0.05em;
+}
+
+.pagename a { color: #fff;  }
+.pagename a:before { content: "r/"; color: #fff; }
+
+.RESBigEditorPop{
+
+    color: black!important;}
+
+/*Sidebar name*/
+
+.side .titlebox .redditname a {
+    background:url(%%picture-sheet%%);
+    opacity:1;
+    display: block;
+    height: 92px;
+    width: 300px;
+    background-position: -200px 0;
+    float: none;
+    font-size: 0}
+
+.side .titlebox .redditname a:hover {
+    background-position: -200px -92px;}
+
+/*Snoo*/
+#header-img-a {
+    display: inline-block;
+    background: url(%%picture-sheet%%) -200px -200px;
+    vertical-align: bottom;
+    height: 90px;
+    width: 110px;
+    position: absolute;
+    bottom: 29px;
+    left: 15px;
+}
+#header-img-a:hover {
+    background-position: -200px -290px;
+}
+#header-img {
+    display: none;
+}
+
+/* Sidebar links */
+
+.titlebox .md a[href="https://fcbayern.com/en/"] {
+    width: 45px;
+    height: 45px;
+
+    display: inline-block;
+    margin-top: 5px;
+    background: url(%%picture-sheet%%) #2b2b2b;
+    transition: background-color 0.2s ease-in-out;
+}
+.titlebox .md a[href="https://fcbayern.com/en/"] {
+    margin-left: 9px;
+    background-position: -200px -445px;
+    border-radius: 45px;
+}
+
+.titlebox .md a[href="https://fcbayern.com/en/"]:hover {
+    background-position: -200px -400px;
+
+}
+
+/*SOCIAL MEDIA v2*/
+.titlebox .md a[href="https://twitter.com/FCBayernEN"],
+.titlebox .md a[href="https://www.facebook.com/FCBayern"],
+.titlebox .md a[href="https://www.youtube.com/user/fcbayern"],
+.titlebox .md a[href="https://instagram.com/fcbayern/"] {
+    width: 45px;
+    height: 45px;
+    border-radius: 45px;
+    display: inline-block;
+    margin-top: 5px;
+    background: url(%%social%%) no-repeat -9999px -9999px #2b2b2b ;
+    transition: background-color 0.1s ease-in-out;
+}
+.titlebox .md a[href="https://twitter.com/FCBayernEN"] {
+    margin-left: 9px;
+    background-position: 0 -90px;
+}
+.titlebox .md a[href="https://www.facebook.com/FCBayern"] {
+    margin-left: 9px;
+    background-position: 0px 0px;
+}
+.titlebox .md a[href="https://www.youtube.com/user/fcbayern"] {
+    margin-left: 9px;
+    background-position: 0px -135px;
+}
+.titlebox .md a[href="https://instagram.com/fcbayern/"] {
+    margin-left: 9px;
+    background-position: 0px -45px;
+}
+
+.titlebox .md a[href="https://www.youtube.com/user/fcbayern"]:hover,
+.titlebox .md a[href="https://www.facebook.com/FCBayern"]:hover,
+.titlebox .md a[href="https://twitter.com/FCBayernEN"]:hover,
+.titlebox .md a[href="https://instagram.com/fcbayern/"]:hover {
+    background-color: #ed1248
+}
+
+
+
+/*Sidebar Links Header*/
+
+.side .md table:nth-of-type(9) tr td:nth-of-type(1){display:none}
+.side .md table:nth-of-type(9) {margin-bottom: 0px}
+
+/*Sidebar Featured Posts Header*/
+
+.side .md table:nth-of-type(2) tr td:nth-of-type(1){display:none}
+.side .md table:nth-of-type(2) {margin-bottom: 10px}
+
+/*Sidebar Featured Posts List*/
+
+div.titlebox .md ul:nth-of-type(1), div.titlebox .md ul:nth-of-type(1):hover {
+    display: block;
+    margin-top: -10px;
+
+}
+
+div.titlebox .md ul:nth-of-type(1) li {
+    border: none;
+    padding: 6px;
+    background-color: #fff;
+    border-left: 3px solid #ddd;
+
+    /*border-bottom: 1px solid #ddd;
+     border-right: 1px solid #ddd;*/
+    font-size: 8pt;
+    margin-right: 3px;
+    margin-left: -37px;
+    list-style-type: none;
+
+}
+
+div.titlebox .md ul:nth-of-type(1) li:hover {
+    background-color: #ddd;
+}
+div.titlebox .md ul:nth-of-type(1) li strong:first-child {
+    display: block;
+}
+
+
+/* Trophies */
+
+.side .md [href$="https://en.wikipedia.org/wiki/DFB-Pokal"] {
+    background: url(%%picture-sheet%%);
+    /* for black:  background-position: 0 -100px; */
+    background-position:0 -140px;
+    opacity: 0.7;
+    height: 40px;
+    width: 19px;
+    display: inline-block;
+    margin-right:5px;
+}
+
+.side .md [href$="https://en.wikipedia.org/wiki/DFB-Pokal"]:hover {
+    background-position:0 -140px;
+    opacity: 1;
+}
+
+.side .md [href$="https://en.wikipedia.org/wiki/Bundesliga"] {
+    background: url(%%picture-sheet%%);
+    /* for black: background-position: 0 0; */
+    background-position:0 -40px;
+    opacity: 0.7;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    margin-right:5px;
+}
+
+.side .md [href$="https://en.wikipedia.org/wiki/Bundesliga"]:hover {
+    background-position:0 -40px;
+    opacity: 1;
+}
+
+.side .md [href$="https://en.wikipedia.org/wiki/FIFA_Club_World_Cup"] {
+    background: url(%%picture-sheet%%);
+    /* for black: background-position: 0 -500px; */
+    background-position:0 -540px;
+    opacity: 0.7;
+    height: 40px;
+    width: 16px;
+    display: inline-block;
+    margin-right:5px;
+}
+
+.side .md [href$="https://en.wikipedia.org/wiki/FIFA_Club_World_Cup"]:hover {
+    background-position:0 -540px;
+    opacity: 1;
+}
+
+.side .md [href$="https://en.wikipedia.org/wiki/UEFA_Super_Cup"] {
+    background: url(%%picture-sheet%%);
+    /* for black: background-position: 0 -699px; */
+    background-position:0 -739px;
+    opacity: 0.7;
+    height: 40px;
+    width: 19px;
+    display: inline-block;
+    margin-right:5px;
+}
+
+.side .md [href$="https://en.wikipedia.org/wiki/UEFA_Super_Cup"]:hover {
+    background-position: 0px -739px;
+    opacity: 1;
+}
+
+.side .md [href$="https://en.wikipedia.org/wiki/UEFA_Champions_League"] {
+    background: url(%%picture-sheet%%);
+    /* for black: background-position: 0 -200px; */
+    background-position:0 -240px;
+    opacity: 0.7;
+    height: 40px;
+    width: 25px;
+    display: inline-block;
+    margin-right:5px;
+}
+
+
+.side .md [href$="https://en.wikipedia.org/wiki/UEFA_Champions_League"]:hover {
+    background-position:0 -240px;
+    opacity: 1;
+}
+
+.side .md [href$="https://en.wikipedia.org/wiki/Intercontinental_Cup_%28football%29"] {
+    background: url(%%picture-sheet%%);
+    /* for black: background-position: 0 -600px; */
+    background-position:0 -640px;
+    opacity: 0.7;
+    height: 40px;
+    width: 15px;
+    display: inline-block;
+    margin-right:5px;
+}
+
+.side .md [href$="https://en.wikipedia.org/wiki/Intercontinental_Cup_%28football%29"]:hover {
+    background-position:0 -640px;
+    opacity: 1;
+}
+
+
+.side .md [href$="https://en.wikipedia.org/wiki/UEFA_Europa_League"] {
+    background: url(%%picture-sheet%%);
+    /* for black: background-position: 0 -300px; */
+    background-position:0 -340px;
+    opacity: 0.7;
+    height: 40px;
+    width: 30px;
+    display: inline-block;
+
+}
+
+.side .md [href$="https://en.wikipedia.org/wiki/UEFA_Europa_League"]:hover {
+    background-position:0 -340px;
+    opacity: 1;
+}
+
+.side .md [href$="https://en.wikipedia.org/wiki/UEFA_Cup_Winners%27_Cup"] {
+    background: url(%%picture-sheet%%);
+    /* for black: background-position: 0 -400px; */
+    background-position:0 -440px;
+    opacity: 0.7;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    margin-left:-5px;
+}
+
+.side .md [href$="https://en.wikipedia.org/wiki/UEFA_Cup_Winners%27_Cup"]:hover {
+    background-position:0 -440px;
+    opacity: 1;
+}
+
+.side .md h2 {
+    margin: 0;
+    position: absolute;
+    top: -165px;
+
+    right:0px;
+    z-index: 9999;
+}
+
+
+
+
+.side .md [href$="https://en.wikipedia.org/wiki/DFB-Pokal"]:hover:after {
+    position: absolute;
+    top: -55px;
+    right: 140px;
+    position: absolute;
+    display: block;
+    background: transparent;
+    z-index: 1000;
+    width: 150px;
+    padding: 5px;
+    border: transparent;
+    content: "DFB-Pokal: x18 Pokalsieger 2016";
+    text-align: center;
+    font:  Helvetica;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-top: 5px
+    color:#fff;
+    color: #fff;
+}
+
+
+.side .md [href$="https://en.wikipedia.org/wiki/Bundesliga"]:hover:after {
+    position: absolute;
+    top: -50px;
+    right: 165px;
+    position: absolute;
+    display: block;
+    background: transparent;
+    z-index: 1000;
+    width: 180px;
+    border: transparent;
+    content: "Meisterschaften: x26 Meister 2016";
+    text-align: center;
+    font:  Helvetica;
+    font-size: 14px;
+    font-weight: bold;
+    color:#fff;
+    color: #fff;
+}
+
+.side .md [href$="https://en.wikipedia.org/wiki/FIFA_Club_World_Cup"]:hover:after {
+    position: absolute;
+    top: -30px;
+    right: 45px;
+    position: absolute;
+    display: block;
+    background: transparent;
+    z-index: 1000;
+    width: 190px;
+    padding: 5px;
+    border: transparent;
+    content: "FIFA CWC: x1";
+    text-align: center;
+    font:  Helvetica;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-top: 5px
+    color:#fff;
+    color: #fff;
+}
+
+.side .md [href$="https://en.wikipedia.org/wiki/UEFA_Super_Cup"]:hover:after {
+    top: -30px;
+    right: 10px;
+    position: absolute;
+    display: block;
+    background: transparent;
+    z-index: 1000;
+    width: 240px;
+    border: transparent;
+    content: "UEFA Super Cup: x1";
+    text-align: center;
+    font:  Helvetica;
+    font-size: 14px;
+    font-weight: bold;
+    color:#fff;
+    color: #fff;
+}
+
+.side .md [href$="https://en.wikipedia.org/wiki/UEFA_Champions_League"]:hover:after {
+    top: -30px;
+    right: 60px;
+    position: absolute;
+    display: block;
+    background: transparent;
+    z-index: 1000;
+    width: 230px;
+    border: transparent;
+    content: "Champions League: x5";
+    text-align: center;
+    font:  Helvetica;
+    font-size: 14px;
+    font-weight: bold;
+    color:#fff;
+    color: #fff;
+}
+
+.side .md [href$="https://en.wikipedia.org/wiki/Intercontinental_Cup_%28football%29"]:hover:after {
+    top: -30px;
+    right: 0px;
+    position: absolute;
+    display: block;
+    background: transparent;
+    z-index: 1000;
+    width: 200px;
+    border: transparent;
+    content: "Intercontinental Cup: x2";
+    text-align: center;
+    font:  Helvetica;
+    font-size: 14px;
+    font-weight: bold;
+    color:#fff;
+    color: #fff;
+}
+
+
+.side .md [href$="https://en.wikipedia.org/wiki/UEFA_Europa_League"]:hover:after {
+    top: -30px;
+    right: 0px;
+    position: absolute;
+    display: block;
+    background: transparent;
+    z-index: 1000;
+    width: 110px;
+
+    border: transparent;
+    content: "UEFA Cup: x1";
+    text-align: center;
+    font:  Helvetica;
+    font-size: 14px;
+    font-weight: bold;
+    color:#fff;
+    color: #fff;
+}
+
+
+.side .md [href$="https://en.wikipedia.org/wiki/UEFA_Cup_Winners%27_Cup"]:hover:after {
+    top: -35px;
+    right: -0px;
+    position: absolute;
+    display: block;
+    background: transparent;
+    z-index: 1000;
+    width: 175px;
+    padding: 5px;
+    border: transparent;
+    content: "Cup Winners' Cup: x1";
+    text-align: center;
+    font:  Helvetica;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-top: 5px
+    color:#fff;
+    color: #fff;
+}
+
+/* top subreddit navbar */
+#sr-header-area {
+    background: -webkit-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -moz-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -ms-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -o-linear-gradient(bottom,#7D001F,#CC0033);
+    border-bottom: none;
+    z-index: 9001;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    visibility: hidden;
+}
+
+#sr-header-area:hover {visibility: visible;opacity: 1;}
+
+#sr-header-area:after {
+    top: 0px;
+    position: absolute;
+    width: 100%;
+    content: "▼";
+    color: #fff;
+    font-size: 12px;
+    visibility: visible !important;
+    text-align: center;
+    opacity: 0.4;
+}
+
+#sr-header-area:hover:after {
+    z-index: -1;
+    content: "";
+}
+
+#sr-header-area a {
+    color: #fff;
+}
+
+#sr-header-area a:hover {text-decoration: none;
+    color: #AFDCEC;
+}
+
+#sr-more-link {
+    position: absolute;
+
+    background-color: #2d2d2d;
+    color: #bcbcbc;
+}
+
+.dropdown.srdrop .selected {color: #BB0F0F;}
+#sr-header-area .drop-choices.srdrop {margin-left: 0px;}
+
+.drop-choices {
+
+    padding: 15px 15px 15px 15px;
+    background-color: white;
+    border: 0px solid;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 3px 5px -3px #a8a8a8;
+    box-shadow: 0px 3px 5px -3px #a8a8a8;
+    color: #3b3b3b;
+    text-align: left;
+    font-weight: lighter;
+    font-size: 13px;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+.drop-choices a {color: #3b3b3b;
+}
+
+.drop-choices a.choice:hover {
+
+    background-color: white;
+    color: #427FED !important;
+}
+
+.drop-choices.srdrop{
+    background: -webkit-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -moz-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -ms-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -o-linear-gradient(bottom,#7D001F,#CC0033);
+}
+a.choice:hover{
+    background: -webkit-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -moz-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -ms-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -o-linear-gradient(bottom,#7D001F,#CC0033);
+}
+
+.dropdown.srdrop .selected.title { color: white }
+
+.dropdown.srdrop .selected.title:hover { color: #AFDCEC }
+
+#sr-header-area a:hover {
+    text-decoration: none;
+    color: #AFDCEC;
+}
+#srLeftContainer, #RESShortcutsViewport, #RESShortcutsEditContainer { max-height: 30px !important; background-color: background: -webkit-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -moz-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -ms-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -o-linear-gradient(bottom,#7D001F,#CC0033); }
+#srLeftContainer, .srdrop { padding-left: 15px !important; }
+#sr-more-link { background: -webkit-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -moz-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -ms-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -o-linear-gradient(bottom,#7D001F,#CC0033); }
+#RESShortcutsEditContainer {
+    height: 20px;
+    background: -webkit-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -moz-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -ms-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -o-linear-gradient(bottom,#7D001F,#CC0033) !important;
+    /* margin-right: 15px !important; */
+    border-right: 15px solid background: -webkit-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -moz-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -ms-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -o-linear-gradient(bottom,#7D001F,#CC0033);
+}
+#RESShortcutsEditContainer div {
+    line-height: 20px !important;
+    color: #fff !important;
+    font-size: 100%;
+    background: -webkit-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -moz-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -ms-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -o-linear-gradient(bottom,#7D001F,#CC0033) !important;
+}
+
+/* user menu */
+
+#header-bottom-right, #userbarToggle {
+    background: -webkit-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -moz-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -ms-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -o-linear-gradient(bottom,#7D001F,#CC0033);
+    color: #000 !important;
+    margin: 0;
+}
+#header-bottom-right {
+    position: absolute;
+    top: 177px !important;
+    right: 0;
+    text-align: right;
+    width: 100%;
+    height: 16px !important;
+    margin: 0 !important;
+    padding: 5px 0 5px 0 !important;
+    z-index: 251;
+    border-radius: 0 !important;
+}
+#header-bottom-right a {
+    color: #fff;
+}
+
+#header-bottom-right a:hover {
+    color: #AFDCEC;
+}
+#header-bottom-right form {
+    display: inline;
+    margin-right: 15px;
+}
+
+.userkarma {
+    color: #fff;
+}
+
+.userkarma:hover {
+    color: #AFDCEC;
+}
+#header-bottom-right #modmail { text-align: left; }
+#userbarToggle { display: none !important; } /* res popup button disabled because it is messed up */
+.user { height: 20px; line-height: 17px; }
+.pref-lang { padding-right: 15px; }
+
+
+/* navibar top/hot/etc */
+
+#header-bottom-left ul.tabmenu {
+    bottom: -10px;
+    left: 0;
+    position: absolute;
+    height: 20px;
+    background: -webkit-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -moz-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -ms-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -o-linear-gradient(bottom,#7D001F,#CC0033);
+    z-index: 500;
+}
+#header-bottom-left ul.tabmenu li {
+    float: left; /* necessary for text-transform (?) */
+}
+#header-bottom-left ul.tabmenu li a {
+    background: none;
+    border: none;
+    color: #fff !important;
+    font-size: 90%;
+    font-weight: normal;
+    margin-right: 10px;
+    padding: 3px 5px 4px;
+    text-align: center;
+    text-transform: uppercase !important;
+    line-height: 20px;
+}
+#header-bottom-left ul.tabmenu li:first-child {
+    margin-left: 125px;
+}
+#header-bottom-left ul.tabmenu li a:hover {
+    color: #AFDCEC !important;
+}
+/* #header-bottom-left ul.tabmenu li.selected a,
+#header-bottom-left ul.tabmenu li.selected a:hover {
+    color: #fff !important;
+    font-weight: bold;
+} */
+
+
+/*Tables*/
+
+
+.md table {
+    border: 2px solid white;
+    background-color: white;
+    box-shadow: 0 0 5px #ccc;
+    margin: 1em;
+}
+.md th, .md td {
+    padding: 1ex;
+}
+.md th {
+    color: #222;
+    background-color: #eee;
+    border-color: #ccc;
+}
+.md td[align=left],
+.md th[align=left] {
+    text-align: left;
+}
+.md td[align=center],
+.md th[align=center] {
+    text-align: center;
+}
+.md td[align=right],
+.md th[align=right] {
+    text-align: right;
+}
+th a {
+    color: #222;
+}
+
+
+/*Tables sidebar*/
+
+.side .md table {
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px #ccc;
+    margin: 3px 0 20px 0;
+    position: relative;
+    right: -1px
+}
+.titlebox .md table {
+    width: 99%;
+    margin-bottom: 15px;
+}
+.side .md table th {
+    background: -webkit-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -moz-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -ms-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -o-linear-gradient(bottom,#7D001F,#CC0033);
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    border-right: 1px solid #525252;
+    color: #fafafa;
+    font-weight: bold;
+    padding: .5em;
+    text-align: center;
+    text-shadow: 1px 1px 0 #2f2f2f;
+    font-size: 10px !important;
+}
+
+.side .md table th a {
+    color: #363636
+}
+
+/* === Formatting === */
+.side .md table td {
+    font-size: 10px !important;
+    border: none;
+    padding: .3em;
+    vertical-align: middle
+}
+.side .md table td a {
+    color: #27262c ;
+    font-weight: normal
+}
+.side .md table td a:hover {
+    color: #c10101 !important;
+    text-decoration: underline
+}
+
+.side .md tr:nth-of-type(odd) {
+    background: #fff;
+
+}
+.side .md tr:nth-of-type(even) {
+    background: #ddd;
+
+}
+
+.res.res-nightmode .side .md tr:nth-of-type(odd) {
+    background: #000!important;
+
+}
+
+.res.res-nightmode .side .md tr:nth-of-type(even) {
+    background: #000!important;
+
+}
+
+.side .md tr:hover {
+    background: #c3bdfb !important;
+    cursor: default
+}
+.side .md tr:hover td:nth-of-type(7) {
+    background: #c3bdfb !important;
+    cursor: default
+}
+
+
+/* Match details adapted from /r/barca and /r/liverpoolfc */
+
+.side .md table:nth-of-type(1){
+    background-color: #fff;
+    border: none; border-radius: 4px; box-shadow: 0 0 2px #333; width: 300px;
+    position: absolute;
+    right: 1px;
+    top: -83px;
+    z-index: 50000;
+}
+
+
+.side .md table:nth-of-type(1) th{display:none}
+.side .md table:nth-of-type(1) tr{background: none !important; vertical-align: middle}
+.side .md table:nth-of-type(1) tr td:nth-of-type(1) {border-right: none !important; width: 75px}
+.side .md table:nth-of-type(1) tr td:nth-of-type(2) {border-right: none !important; width: 25px}
+.side .md table:nth-of-type(1) tr td:nth-of-type(3) {border-right: none !important; width: 115px}
+.side .md table:nth-of-type(1) tr td:nth-of-type(4) {border-right: none !important; width: 25px}
+
+.side .md table:nth-of-type(1) tr:nth-of-type(1) td:nth-of-type(3) a:nth-of-type(1) {
+    color: #228822 !important
+}
+.side .md table:nth-of-type(1) tr:nth-of-type(1) td:nth-of-type(3) a:nth-of-type(2) {
+    color: #0e2b89 !important
+}
+.side .md table:nth-of-type(1) tr:nth-of-type(1) td:nth-of-type(3) a:nth-of-type(3) {
+    color: #980f39 !important
+}
+
+.side .md table:nth-of-type(1) tr:nth-of-type(2) td:nth-of-type(3) a:nth-of-type(1) {
+    color: #DF0101 !important
+}
+
+
+/* Sidebar table space (table 2) + italic sidebar font*/
+
+.side .md h6 {
+    font-size:11px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: -13px;
+    text-decoration: none;
+}
+
+/*who's in here?*/
+.titlebox .word { display: none; }
+.subscribers .number:after { content: ' members of the Südkurve'; }
+.users-online .number:after { content: ' standing in the Südkurve'; }
+
+
+/*sticky post*/
+
+.stickied .title {
+    color:#CC0033!important;
+}
+.stickied-tagline {
+    color:#CC0033!important;
+}
+
+
+
+.linkflair-fcbTVnews .linkflairlabel, .res-nightmode linkflair-fcbTVnews .linkflairlabel {
+    content: "";
+    width: 71px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 2px;
+    /*vertical-align:baseline;*/
+    vertical-align:bottom;
+    background-image: url(%%picture-sheet%%)!important;
+    background-repeat: no-repeat;
+    background-position: -50px -60px;
+
+    background-color: transparent;
+    color: transparent!important;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    text-indent: -50px;
+}
+
+.linkflair-fcbYoutube .linkflairlabel, .res-nightmode linkflair-fcbYoutube .linkflairlabel {
+    content: "";
+    width: 62px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 2px;
+    /*vertical-align:baseline;*/
+    vertical-align:bottom;
+    background-image: url(%%picture-sheet%%)!important;
+    background-repeat: no-repeat;
+    background-position: -50px -90px;
+
+    background-color: transparent;
+    color: transparent!important;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    text-indent: -50px;
+}
+
+
+.linkflair-star .linkflairlabel, .res-nightmode linkflair-star .linkflairlabel {
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 2px;
+    /*vertical-align:baseline;*/
+    vertical-align:bottom;
+    background-image: url(%%icons-big%%)!important;
+    background-repeat: no-repeat;
+    background-position: 0 42.5%;
+
+    background-color: transparent;
+    color: transparent!important;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    text-indent: -50px;
+}
+
+
+.linkflair-pre .linkflairlabel, .res-nightmode linkflair-pre .linkflairlabel {
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 2px;
+    /*vertical-align:baseline;*/
+    vertical-align:middle;
+
+
+    background-image: url(%%icons-big%%)!important;
+    background-repeat: no-repeat;
+    background-position: 0 10%;
+
+    background-color: transparent;
+    color: transparent!important;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    text-indent: -50px;
+}
+
+
+.linkflair-match .linkflairlabel, .res-nightmode linkflair-match .linkflairlabel {
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 2px;
+    /*vertical-align:baseline;*/
+    vertical-align:middle;
+    background-image: url(%%icons-big%%)!important;
+    background-repeat: no-repeat;
+    background-position: 0 5%;
+
+    background-color: transparent;
+    color: transparent!important;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    text-indent: -50px;
+}
+
+
+.linkflair-post .linkflairlabel, .res-nightmode linkflair-post .linkflairlabel {
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 2px;
+    /*vertical-align:baseline;*/
+    vertical-align:middle;
+    background-image: url(%%icons-big%%)!important;
+    background-repeat: no-repeat;
+    background-position: 0 65%;
+
+    background-color: transparent;
+    color: transparent!important;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    text-indent: -50px;
+}
+
+.linkflair-info .linkflairlabel, .res-nightmode linkflair-info .linkflairlabel {
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 2px;
+    /*vertical-align:baseline;*/
+    vertical-align:middle;
+    background-image: url(%%icons-big%%)!important;
+    background-repeat: no-repeat;
+    background-position: 0 17.5%;
+
+    background-color: transparent;
+    color: transparent!important;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    text-indent: -50px;
+}
+
+
+
+.linkflair-ratings .linkflairlabel, .res-nightmode linkflair-ratings .linkflairlabel {
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 2px;
+    /*vertical-align:baseline;*/
+    vertical-align:middle;
+    background-image: url(%%icons-big%%)!important;
+    background-repeat: no-repeat;
+    background-position: 0 72.5%;
+
+    background-color: transparent;
+    color: transparent!important;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    text-indent: -50px;
+}
+
+
+a.title[href*="fcbayern.de"]:before, a.title[href*="FCBayern.de"]:before, a.title[href*="fcbayernmunich.com/us/"]:before, a.title[href*="FCBayernmunich.com/us/"]:before, a.title[href*="twitter.com/FCBayern/"]:before, a.title[href*="twitter.com/fcbayern/"]:before, a.title[href*="twitter.com/FCBayernEN/"]:before, a.title[href*="twitter.com/FCBayernen/"]:before, a.title[href*="twitter.com/fcbayernEN/"]:before, a.title[href*="twitter.com/fcbayernen/"]:before, a.title[href*="facebook.com/FCBayern/"]:before, a.title[href*="facebook.com/fcbayern/"]:before, a.title[href*="facebook.com/FCBayern.en/"]:before, a.title[href*="facebook.com/fcbayern.en/"]:before, a.title[href*="https://fcbayern.com/"]:before {
+    content: "";
+    width: 68px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 4px;
+    /*vertical-align:baseline;*/
+    vertical-align:bottom;
+    background-image:url(%%picture-sheet%%) !important;
+    background-repeat: no-repeat;
+    background-position: -50px 0px!important;
+
+    background-color: transparent;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+
+}
+
+.res-nightmode a.title[href*="fcbayern.de"]:before, .res-nightmode a.title[href*="FCBayern.de"]:before, .res-nightmode a.title[href*="fcbayernmunich.com/us/"]:before, .res-nightmode a.title[href*="FCBayernmunich.com/us/"]:before, .res-nightmode a.title[href*="twitter.com/FCBayern/"]:before, .res-nightmode a.title[href*="twitter.com/fcbayern/"]:before, .res-nightmode a.title[href*="twitter.com/FCBayernEN/"]:before, .res-nightmode a.title[href*="twitter.com/FCBayernen/"]:before, .res-nightmode a.title[href*="twitter.com/fcbayernEN/"]:before, .res-nightmode a.title[href*="twitter.com/fcbayernen/"]:before, .res-nightmode a.title[href*="facebook.com/FCBayern/"]:before, .res-nightmode a.title[href*="facebook.com/fcbayern/"]:before, .res-nightmode a.title[href*="facebook.com/FCBayern.en/"]:before, .res-nightmode a.title[href*="facebook.com/fcbayern.en/"]:before, .res-nightmode a.title[href*="https://fcbayern.com/"]:before {
+    content: "";
+    width: 68px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 4px;
+    /*vertical-align:baseline;*/
+    vertical-align:bottom;
+    background-image: url(%%picture-sheet%%)!important;
+    background-repeat: no-repeat;
+    background-position: -50px -30px !important;
+
+    background-color: transparent;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+
+}
+
+
+a.title[href*="match_thread"]:before, .self a.title[href*="match_thread"]:before,
+.self a.title[href*="small_talk_monday"]:before, .self a.title[href*="donnerstag_auf_deutsch"]:before, .self a.title[href*="player_preview"]:before, .self a.title[href*="international_break_bayern_players"]:before, .self a.title[href*="bayern_players_on_international_duty"]:before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 3px;
+    background-image: url(%%icons-big%%);
+    background-position: 0 5%;
+    background-repeat: no-repeat;
+    vertical-align:middle;
+}
+
+.self a.title[href*="/post_match_thread"]:before,
+.self a.title[href*="/post-match_thread"]:before,
+.self a.title[href*="/postmatch_thread"]:before {
+    background-position: 0 65%;
+}
+
+.self a.title[href*="/pre_match_thread"]:before,
+.self a.title[href*="/pre-match_thread"]:before,
+.self a.title[href*="/prematch_thread"]:before{
+    background-position: 0 10%;
+}
+
+.self a.title[href*="player_preview"]:before{
+    background-position: 0 42.5%;
+}
+
+.self a.title[href*="international_break_bayern_players"]:before,
+.self a.title[href*="bayern_players_on_international_duty"]:before {
+    background-position: 0 42.5%;
+}
+
+.self a.title[href*="small_talk_monday"]:before{
+    background-position: 0 7.5%;
+}
+
+.self a.title[href*="donnerstag_auf_deutsch"]:before{
+    background-position: 0 7.5%;
+}
+
+/* link color sidestar */
+
+div.titlebox .md ul:nth-of-type(1) a
+{
+    color: #369!important;
+
+}
+
+
+.self a.title[href*="match_thread"], .self a.title[href*="small_talk_monday"], .self a.title[href*="donnerstag_auf_deutsch"], .self a.title[href*="player_preview"], .self a.title[href*="international_break_bayern_players"], .self a.title[href*="bayern_players_on_international_duty"]{
+    color: #CC0033!important;
+    font-weight: bold;
+}
+
+
+
+/* content basics */
+
+.content {
+    margin: 20px 330px 5px 15px; /* first number: with sticky 50px; without 20px*/
+}
+.wiki-page .wiki-page-content { margin-right: 0;
+}
+
+.sheets { margin-right: 0; }
+
+.sitetable {
+    padding-top: 9px;
+}
+
+.link {
+    background: #fff;
+
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: -1px;
+    position: relative;
+}
+
+/* link color */
+
+#siteTable div.thing a.title { color: #369; }
+
+#siteTable div.thing a.title:visited {
+    color: #84A3C1
+}
+
+
+.res-nightmode .link {
+    background: none;
+}
+
+
+.link.last-clicked {
+    overflow: visible;
+    border: 1px solid #ddd;
+}
+
+.listing-page .link:hover {
+    background: #FAFAFA;
+
+}
+
+.res-nightmode .listing-page .link:hover {
+    background: none;
+}
+
+.listing-page .thing.stickied {
+    margin-bottom: 10px;
+}
+.link.stickied,
+.listing-page .link.stickied:hover {
+    background: #e2eefa;
+    border-color: #cbdef3;
+}
+
+#siteTable .stickied a.title {
+    color: #282;
+}
+.link.thing.stickied.self a.title,
+.link.thing.stickied.self a.title:active,
+.link.thing.stickied.self a.title:visited {
+}
+
+/* Thumbnails */
+
+.thumbnail {
+    padding-right: 5px;
+
+}
+.thumbnail.self {
+
+    background:  url(%%picture-sheet%%) no-repeat center center;
+    background-position:-35px -175px;
+}
+
+
+a.thumbnail[href*="fcbayern.de"], a.thumbnail[href*="fcbayernmunich.com/us/"], a.thumbnail[href*="twitter.com/FCBayern/"],
+a.thumbnail[href*="twitter.com/fcbayernen/"], a.thumbnail[href*="facebook.com/FCBayern/"]   {
+    background: url(%%picture-sheet%%) no-repeat center center;
+    background-position:-35px -115px;
+}
+
+.thumbnail img {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+}
+
+
+/* HTML & Body
+body {
+    background: white;
+    box-shadow: 0 0 16px #000;
+    margin: 0 auto;
+}
+
+
+*/hide creator*/
+
+.titlebox .bottom {display:none;}
+
+.titlebox .bottom .flair {display:none;}
+
+.titlebox .bottom .age {display:none;}
+
+
+/* subscribe/unsubscribe button (and accompanying RES buttons) */
+
+button, .fancy-toggle-button .remove, .res .RESDashboardToggle, .res .RESDashboardToggle.remove, .res .RESshortcutside, .res .RESshortcutside.remove {
+    padding: 3px 8px !important;
+    background: -webkit-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -moz-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -ms-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -o-linear-gradient(bottom,#7D001F,#CC0033);
+    border: #680202 1px solid !important;
+    color: #fff !important;
+
+}
+
+.fancy-toggle-button .add {
+    padding: 3px 10px !important;
+    background: -webkit-linear-gradient(bottom,#0000CC,#4D4DDB);
+    background: -moz-linear-gradient(bottom,#0000CC,#4D4DDB);
+    background: -ms-linear-gradient(bottom,#0000CC,#4D4DDB);
+    background: -o-linear-gradient(bottom,#0000CC,#4D4DDB);
+    border: #680202 1px solid !important;
+    color: #fff !important;
+}
+
+button:hover, .res .RESshortcutside:hover, .res .RESshortcutside.remove:hover,
+.res .RESDashboardToggle:hover,
+.res .RESDashboardToggle.remove:hover, button:focus, .res .RESshortcutside:focus, .res .RESshortcutside.remove:focus,
+.res .RESDashboardToggle:focus,
+.res .RESDashboardToggle.remove:focus,
+.fancy-toggle-button:hover .remove {
+    color: white;
+    text-decoration: none !important;
+    background: -webkit-linear-gradient(bottom,#0000CC,#4D4DDB);
+    background: -moz-linear-gradient(bottom,#0000CC,#4D4DDB);
+    background: -ms-linear-gradient(bottom,#0000CC,#4D4DDB);
+    background: -o-linear-gradient(bottom,#0000CC,#4D4DDB);
+}
+
+.fancy-toggle-button:hover .add {
+    font-size: 11px;
+}
+
+.infobar, .linkinfo,
+.content.submit .info-notice {
+    background: #CCCCF5;
+    border: solid 1px rgba(0, 0, 0, 0.3);
+    font-family: "Liberation Sans", Arial, sans-serif;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.7);
+    -moz-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.7);
+}
+
+.icon-menu a {
+    background: none;
+    display: block;
+    padding: 3px 6px;
+    vertical-align: middle;
+    border-color: transparent;
+    border-width: 1px;
+    border-style: solid;
+    color: #6b6b6b;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.icon-menu a:hover {
+    text-decoration: none;
+    border-color: rgba(0, 0, 0, 0.3);
+    background: -webkit-linear-gradient(top, #f7f7f7, #ededed);
+    background: -moz-linear-gradient(top, #f7f7f7, #ededed);
+    background: -o-linear-gradient(top, #f7f7f7, #ededed);
+    background: linear-gradient(top, #f7f7f7, #ededed);
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.13);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.13);
+}
+.icon-menu a:active {
+    background: -webkit-linear-gradient(top, #f2f2f2, #e2e2e2);
+    background: -moz-linear-gradient(top, #f2f2f2, #e2e2e2);
+    background: -o-linear-gradient(top, #f2f2f2, #e2e2e2);
+    background: linear-gradient(top, #f2f2f2, #e2e2e2);
+    -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(255, 255, 255, 0.8);
+    -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(255, 255, 255, 0.8);
+}
+
+
+
+/* search bar*/
+.side #search {
+    position: relative;
+    z-index: 9999;
+    top: 0;
+    right: -5px;
+    margin-bottom: 15px;
+
+}
+.side #search input[name="q"] {
+    border: 2px solid #000;
+    width: 286px !important;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background-repeat: repeat-x;
+    color: #b5b5b5;
+    font-size: 12px;
+    padding: 5px;
+    background: -webkit-linear-gradient(bottom,#f0f2f3,#ffffff);
+    background: -moz-linear-gradient(bottom,#f0f2f3,#ffffff);
+    background: -ms-linear-gradient(bottom,#f0f2f3,#ffffff);
+    background: -o-linear-gradient(bottom,#f0f2f3,#ffffff);
+}
+
+.side #search input[name="q"]:hover, .side #search input[name="q"]:focus {
+    border-color: #F54646;
+    outline: 0;
+    color: #363636
+}
+.side #search input[name="q"]:focus {
+    -moz-box-shadow: inset 0 1px 1px rgb(0,0,0);
+    -webkit-box-shadow: inset 0 1px 1px rgb(0,0,0);
+    box-shadow: inset 0 1px 1px rgb(0,0,0);
+    -moz-box-shadow: 0 0 8px rgb(252,175,233);
+    -webkit-box-shadow: 0 0 8px rgb(252,175,233);
+    box-shadow: 0 0 8px rgb(252,175,233);
+}
+.side #searchexpando {
+    /* border: 1px solid #ffe600; */
+    background: #E77471;
+}
+
+/* PRETTY SUBMIT LINKS by /u/RainbowCrash*/
+.morelink {
+    font-weight:normal;
+    letter-spacing:0;
+    background: #525252;
+    background: -webkit-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -moz-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -ms-linear-gradient(bottom,#7D001F,#CC0033);
+    background: -o-linear-gradient(bottom,#7D001F,#CC0033);
+    border: 1px solid #000;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    -o-border-radius:2px;
+    -ms-border-radius:2px;
+    -khtml-border-radius:2px;
+    border-radius:2px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.morelink:hover {
+    background: #525252;
+    background: -webkit-linear-gradient(bottom,#0000CC,#4D4DDB);
+    background: -moz-linear-gradient(bottom,#0000CC,#4D4DDB);
+    background: -ms-linear-gradient(bottom,#0000CC,#4D4DDB);
+    background: -o-linear-gradient(bottom,#0000CC,#4D4DDB);
+    border: 1px solid #000;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    -o-border-radius:2px;
+    -ms-border-radius:2px;
+    -khtml-border-radius:2px;
+    border-radius:2px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    color: #ffffff;
+}
+.morelink .nub  {
+    display: none;
+}
+
+.morelink  {
+    color: #ffffff;
+    font-family:Verdana, Arial, sans-serif;
+    font-size:16px;
+    width: 145px;
+}
+
+.morelink a, .morelink a:hover {
+    color: white;
+}
+
+.sidebox.submit-link .morelink::before  {
+    display: block;
+    clear: none;
+    content: "Submit a Link";
+    font-size: 95%;
+}
+
+.sidebox.submit-text .morelink::before {
+    display: block;
+    clear: none;
+    content: "Submit a Self Post";
+    font-size: 90%;
+}
+
+.sidebox.submit .morelink a {
+    position: absolute;
+    top: 0;
+    padding-left: 1000px;
+    font-size: 0;
+    text-align: right;
+    color:  #ffffff;
+}
+
+.sidebox.submit.submit-link {
+    width: 150px;
+}
+
+.sidebox.submit.submit-text {
+    margin-top: -44px;
+    margin-left: 153px;
+}
+
+.sidebox.create {
+    display: none;
+}
+
+.sidebox.submit.disabled  {
+    display: none;
+}
+/* NIGHTMODE FIXES */
+.res.res-nightmode .sidebox.submit.submit-text {
+    background: none !important;
+    margin-top: -45px;
+    margin-left: 153px;
+}
+
+.res.res-nightmode .sidebox  {
+    padding-left: 0 !important;
+    border: 2px solid #151515 !important;
+}
+
+.res.res-nightmode .morelink {
+    height: 29px !important;
+}
+
+.res.res-nightmode .morelink {
+    background:rgb(39, 63, 87) !important;
+}
+
+.res.res-nightmode .morelink:hover {
+    background: #449ef8 !important;
+    background-color: #9edbf8 !important;
+    border-color: #9edbf8 !important;
+}
+/* END NIGHTMODE FIX */
+
+/* END PRETTY SUBMIT LINKS */
+
+/*jump top & footer pic (thanks to /r/realmadrid)*/
+
+#jumpToContent {
+    position: fixed;
+    top:auto;
+    height: 26px;
+    width: 41px;
+    left: 50%;
+    bottom: 0px;
+    font-size: 0px;
+    border:1px solid #c3c3c3;
+    border-bottom: 0;
+    border-radius:6px 6px 0 0;
+    text-indent: -9999px;
+    margin-left: -13px;
+    color:#777777;
+    background-color:#f4f4f4;
+    background-image: url(%%picture-sheet%%);
+    background-position: -59px -241px;
+    background-repeat: no-repeat;
+    opacity: .7;
+    transition: opacity .5s, height .5s, box-shadow .5s;
+    box-shadow: 0 0 2px #ccc;
+    outline:none;
+}
+#jumpToContent:after {
+    text-indent: 0px !important;
+    content: "TOP";
+    font-size: 11px !important;
+    font-family: "Gill Sans","Century Gothic",helvetica,arial;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    opacity:0;
+    transition: opacity .5s;
+}
+#jumpToContent:hover {
+    opacity: 1;
+    height:35px;
+    box-shadow: none;
+}
+
+
+#jumpToContent:hover:after {
+    opacity: 1;
+}
+#jumpToContent:focus {
+    margin-left:-13px!important;
+}
+
+.footer-parent {
+    padding-top: 420px;
+    background-color: transparent;
+    background-image: url(%%meister2016%%);
+    background-position: 40% 0;
+    background-repeat: no-repeat;
+    margin: 0px;
+    margin-top:5px;
+    opacity: 0.8;
+}
+
+/* hide clutter (thanks r/canada!) */
+#suggested-reddits, #link-desc, #text-desc, .side .bottom, .side .submit .spacer, .side .sidebox.create, .leavemoderator, .rank, .leavecontributor-button, #RESSearchMenuItem {
+    display: none !important
+}
+
+
+/* Wiki link*/
+
+a[href="https://www.reddit.com/r/fcbayern/wiki/"]{font-weight:bold!important;}
+
+/*sidebar teiler*/
+
+.side a[href="http://www.fcbayern.de/en/matches/fixtures-results/bundesliga/"]{color:white!important;}
+.side a[href="http://www.fcbayern.de/en/matches/fixtures-results/bundesliga/"]:hover {color:#A4A4A4!important;}
+.side a[href="http://www.fcbayern.telekom.de/en/matches/match-reports/"]{color:white!important;}
+.side a[href="http://www.fcbayern.telekom.de/en/matches/match-reports/"]:hover {color:#A4A4A4!important;}
+.side a[href="https://fcbayern.com/en/standings/bundesliga/2017-2018"]{color:white!important;}
+.side a[href="http://www.fcbayern.de/en/matches/standings/bundesliga/"]:hover {color:#A4A4A4!important;}
+.side a[href="https://www.reddit.com/r/fcbayern/wiki/top_scorers#wiki_season_2015.2F16"]{color:white!important;}
+.side a[href="https://www.reddit.com/r/fcbayern/wiki/top_scorers#wiki_season_2015.2F16"]:hover {color:#A4A4A4!important;}
+.side a[href="http://www.transfermarkt.co.uk/fc-bayern-munchen/sperrenundverletzungen/verein/27"]{
+    color: white!important;}
+.side a[href="http://www.transfermarkt.co.uk/fc-bayern-munchen/sperrenundverletzungen/verein/27"]:hover{
+    color: #A4A4A4!important;}
+
+.titlebox .usertext .md {
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+}
+
+.titlebox .usertext .md > h1, .titlebox .usertext .md > h3, .titlebox .usertext .md > h4 {
+
+    margin: 0;
+    padding: 0;
+    font-size: small;
+    background: -webkit-linear-gradient(bottom,#183d9c,#1f4ec8);
+    background: -moz-linear-gradient(bottom,#183d9c,#1f4ec8);
+    background: -ms-linear-gradient(bottom,#183d9c,#1f4ec8);
+    background: -o-linear-gradient(bottom,#183d9c,#1f4ec8);
+    /*background-color: #1f4ec8;*/
+    color: #fff;
+    padding: 4px 0 5px 14px;
+    margin-right: -5px;
+    margin-left: -10px;
+    margin-bottom: 5px;
+    z-index: 100;
+    text-shadow: 1px 1px 0 #000;
+}
+
+.titlebox .usertext .md > h3 {
+    font-weight: normal;}
+
+.titlebox .usertext .md > h4 {
+    border-bottom: 5px solid #fff;
+    margin-top: 5px;}
+
+.titlebox .usertext .md > h1 {
+    border: 0;
+    margin-top: 10px;}
+.titlebox .usertext .md > h3 {
+    border-bottom: 5px solid #fff;
+    margin-top: 5px;}
+
+
+/*sidebar hover boxes*/
+
+div.titlebox .md h3:before, div.titlebox .md h4:before { content: "+"; color: #e1d516; padding-right: 5px; }
+
+.side .md { overflow: visible; }
+div.titlebox .md h3 + ul:nth-of-type(2), div.titlebox .md h3 + ul:nth-of-type(3) {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+div.titlebox .md h3:hover + ul:nth-of-type(2), div.titlebox .md ul:nth-of-type(2):hover, div.titlebox .md h3:hover + ul:nth-of-type(3), div.titlebox .md ul:nth-of-type(3):hover {
+    display: block;
+    margin-top:-10px;
+}
+div.titlebox .md ul:nth-of-type(2) li, div.titlebox .md ul:nth-of-type(3) li {
+    border: none;
+    padding: 10px;
+    border-left: 5px solid #ddd;
+    background-color: #F2F2F2;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    font-size: 8pt;
+    margin-right: 5px;
+}
+div.titlebox .md ul:nth-of-type(2) li:hover, div.titlebox .md ul:nth-of-type(3) li:hover {
+    background-color: #ddd;
+}
+div.titlebox .md ul:nth-of-type(2) li strong:first-child, div.titlebox .md ul:nth-of-type(3) li strong:first-child {
+    display: block;
+}
+
+
+
+.side .md h4 + table { display: none; }
+.side .md h4:hover + table { display: table; margin-top:-5px;}
+.side .md h4 + table:hover { display: table;  margin-top:-5px;}
+
+
+/*Submit Text*/
+.submit-page .formtabs-content .spacer:first-child { margin-top: 150px; } .submit_text.roundfield { background-color: #E77471; position: absolute; top: 290px; }
+
+/* RES Annotations*/
+
+.res .keyNavAnnotation {
+    display: none;}
+
+/* Clublogos */
+
+.side [href$="/r/effzeh"], .side a[href$="/r/mainz05"], .side a[href$="/wiki/TSG_1899_Hoffenheim"], .side a[href$="/r/Bayer04"], .side a[href$="/r/borussiadortmund"], .side a[href$="/r/fohlenelf"], .side a[href$="/r/FCAugsburg"], .side a[href$="/r/fcbayern"], .side a[href$="/r/schalke04"], .side a[href$="/r/hsv"], .side a[href$="/wiki/Hannover_96"], .side a[href$="/wiki/Hertha_BSC"], .side a[href$="/r/svw"], .side a[href$="/wiki/SC_Freiburg"], .side a[href$="/r/vfbstuttgart"],  .side a[href$="/r/diewolfe"], .side a[href$="/r/eintracht"], .side a[href$="/wiki/Placeholder"], .side a[href$="/wiki/2016%E2%80%9317_Bundesliga"], .side a[href$="/wiki/2016%E2%80%9317_UEFA_Champions_League"], .side a[href$="/wiki/2016%E2%80%9317_DFB-Pokal"], .side a[href$="/wiki/FC_Rostov"], .side a[href$="/wiki/2017_DFL-Supercup"],  .side a[href$="/wiki/SC_Paderborn_07"], .side a[href$="/r/MCFC"], .side a[href$="/r/ASRoma"], .side a[href$="/wiki/FC_Shakhtar_Donetsk"], .side a[href$="/wiki/VfL_Bochum"], .side a[href$="/wiki/Eintracht_Braunschweig"], .side a[href$="/r/FCPorto"], .side a[href$="/r/Barca"], .side a[href$="/r/acmilan"], .side a[href$="/r/valenciacf"], .side a[href$="/r/FCInterMilan"], .side a[href$="/wiki/Dynamo_Dresden"], .side a[href$="/r/realmadrid"], .side a[href$="/r/coys"], .side a[href$="/wiki/FC_Ingolstadt_04"], .side a[href$="/r/sv98"], .side a[href$="/r/Gunners"], .side a[href$="/wiki/GNK_Dinamo_Zagreb"], .side a[href$="/wiki/Olympiacos_F.C."], .side a[href$="/r/Juve"], .side a[href$="/r/benfica"], .side a[href$="/r/atletico"], .side a[href$="/wiki/SV_Lippstadt_08"], .side a[href$="/wiki/SpVgg_Landshut"], .side a[href$="/wiki/FC_Carl_Zeiss_Jena"], .side a[href$="/r/PSV"], .side a[href$="/wiki/RB_Leipzig"]{
+    background-color: transparent;
+    background-image: url(%%logos%%);
+    height: 12px;
+    background-repeat: no-repeat;
+    padding: 5px 0 3.2px 26px;
+    margin-left: 1px;
+    display: inline-block
+}
+.side a[href$="/r/fcbayern"] { background-position: 0 0; }
+.side a[href$="/r/borussiadortmund"] { background-position: 0 -30px; }
+.side a[href$="/r/FCAugsburg"] { background-position: 0 -60px; }
+.side a[href$="/r/Bayer04"] { background-position: 0 -88px; }
+.side a[href$="/r/fohlenelf"] { background-position: 0 -120px; }
+.side a[href$="/wiki/Hertha_BSC"] { background-position: 0 -150px; }
+.side a[href$="/r/svw"] { background-position: 0 -180px; }
+.side a[href$="/r/eintracht"] { background-position: 0 -210px; }
+.side a[href$="/wiki/SC_Freiburg"] { background-position: 0 -240px; }
+.side a[href$="/r/hsv"] { background-position: 0 -270px; }
+.side a[href$="/wiki/Hannover_96"] { background-position: 0 -298px; }
+.side a[href$="/wiki/TSG_1899_Hoffenheim"] { background-position: 2px -330px; }
+.side a[href$="/r/effzeh"] { background-position: 0 -360px; }
+.side a[href$="/r/mainz05"] { background-position: 0 -390px; }
+.side a[href$="/wiki/SC_Paderborn_07"] { background-position: 0 -420px; }
+.side a[href$="/r/schalke04"] { background-position: 0 -450px; }
+.side a[href$="/r/vfbstuttgart"] { background-position: 0 -480px; }
+.side a[href$="/r/diewolfe"] { background-position: 0 -510px; }
+.side a[href$="/wiki/Placeholder"]{ background-position: 0 -540px; }
+.side a[href$="/r/atletico"] { background-position: 0 -570px; }
+.side a[href$="/r/Juve"] { background-position: 0 -600px; }
+.side a[href$="/wiki/2016%E2%80%9317_DFB-Pokal"]{ background-position: 0 -630px; }
+.side a[href$="/wiki/2016%E2%80%9317_UEFA_Champions_League"]{ background-position: 0 -660px; }
+.side a[href$="/wiki/2016%E2%80%9317_Bundesliga"] { background-position: 0 -690px; }
+.side a[href$="/r/PSV"] { background-position: 0 -720px; }
+.side a[href$="/wiki/2017_DFL-Supercup"] { background-position: 0 -750px; }
+.side a[href$="/r/MCFC"] { background-position: 0 -780px; }
+.side a[href$="/wiki/Olympiacos_F.C."] { background-position: 0 -810px; }
+.side a[href$="/r/ASRoma"] { background-position: 0 -840px; }
+.side a[href$="/wiki/FC_Shakhtar_Donetsk"] { background-position: 0 -870px; }
+.side a[href$="/wiki/GNK_Dinamo_Zagreb"] { background-position: 0 -900px; }
+.side a[href$="/r/Gunners"] { background-position: 0 -930px; }
+.side a[href$="/wiki/VfL_Bochum"] { background-position: 0 -960px; }
+.side a[href$="/wiki/Eintracht_Braunschweig"]{ background-position: 0 -990px; }
+.side a[href$="/r/FCPorto"]{ background-position: 0 -1020px; }
+.side a[href$="/r/Barca"]{ background-position: 0 -1050px; }
+.side a[href$="/r/acmilan"]{ background-position: 0 -1080px; }
+.side a[href$="/r/valenciacf"]{ background-position: 0 -1110px; }
+.side a[href$="/r/FCInterMilan"]{ background-position: 0 -1140px; }
+.side a[href$="/wiki/SV_Lippstadt_08"]{ background-position: 0 -1170px; }
+.side a[href$="/wiki/Dynamo_Dresden"]{ background-position: 0 -1200px; }
+.side a[href$="/wiki/RB_Leipzig"]{ background-position: 0 -1230px; }
+.side a[href$="/r/realmadrid"]{ background-position: 0 -1260px; }
+.side a[href$="/r/coys"]{ background-position: 0 -1290px; }
+.side a[href$="/wiki/FC_Rostov"]{ background-position: 0 -1320px; }
+.side a[href$="/wiki/FC_Ingolstadt_04"]{ background-position: 0 -1350px; }
+.side a[href$="/r/sv98"]{ background-position: 0 -1380px; }
+.side a[href$="/r/benfica"]{ background-position: 0 -1410px; }
+.side a[href$="/wiki/FC_Carl_Zeiss_Jena"]{ background-position: 0 -1440px; }
+
+
+div.titlebox .md h3 a[href$="/r/fcbayern"]
+{ color:white!important;
+    background-position: 0 1000000px!important;
+    padding: 0px 0 0px 0px!important;
+}
+
+/* Video icon */
+/* === start: video icon ===== */
+
+.comment .md a[href*="youtube.com/"]:before,
+.comment .md a[href*="youtu.be/"]:before,
+.comment .md a[href*="gfycat.com/"]:before,
+.comment .md a[href*="vimeo.com/"]:before,
+.comment .md a[href*="vine.co/"]:before,
+.comment .md a[href*="veoh.com/"]:before,
+.comment .md a[href*="twitvid.com/"]:before,
+.comment .md a[href*="/video/"]:before,
+.comment .md a[href*="/videok/"]:before,
+.comment .md a[href*="/gvideos/"]:before,
+.comment .md a[href*="vine.co/"]:before,
+.comment .md a[href*="mediacrush.net/"]:before,
+.comment .md a[href*="vid.me/"]:before,
+.comment .md a[href*="arsenalist.com/"]:before,
+.comment .md a[href*="fitbamob.com/"]:before,
+.comment .md a[href*="streamable.com/"]:before,
+.comment .md a[href*="footytube.com/"]:before,
+.comment .md a[href*="gifyoutube.com/"]:before,
+.comment .md a[href*="offsided.com/"]:before,
+.comment .md a[href*="video.gazzetta.it/"]:before,
+.comment .md a[href*="imgrush.com/"]:before,
+.comment .md a[href$=".avi"]:before,
+.comment .md a[href$=".mp4"]:before,
+.comment .md a[href$=".gif"]:before,
+.comment .md a[href$=".gifv"]:before,
+.comment .md a[href$=".webm"]:before,
+.comment .md a[href$=".ogg"]:before,
+.comment .md a[href$=".ogv"]:before, .expando .md a[href*="youtube.com/"]:before,
+.expando .md a[href*="youtu.be/"]:before,
+.expando .md a[href*="gfycat.com/"]:before,
+.expando .md a[href*="vimeo.com/"]:before,
+.expando .md a[href*="vine.co/"]:before,
+.expando .md a[href*="veoh.com/"]:before,
+.expando .md a[href*="twitvid.com/"]:before,
+.expando .md a[href*="/video/"]:before,
+.expando .md a[href*="/videok/"]:before,
+.expando .md a[href*="/gvideos/"]:before,
+.expando .md a[href*="vine.co/"]:before,
+.expando .md a[href*="mediacrush.net/"]:before,
+.expando .md a[href*="vid.me/"]:before,
+.expando .md a[href*="arsenalist.com/"]:before,
+.expando .md a[href*="fitbamob.com/"]:before,
+.expando .md a[href*="streamable.com/"]:before,
+.expando .md a[href*="footytube.com/"]:before,
+.expando .md a[href*="gifyoutube.com/"]:before,
+.expando .md a[href*="offsided.com/"]:before,
+.expando .md a[href*="video.gazzetta.it/"]:before,
+.expando .md a[href*="imgrush.com/"]:before,
+.expando .md a[href$=".avi"]:before,
+.expando .md a[href$=".mp4"]:before,
+.expando .md a[href$=".gif"]:before,
+.expando .md a[href$=".gifv"]:before,
+.expando .md a[href$=".webm"]:before,
+.expando .md a[href$=".ogg"]:before,
+.expando .md a[href$=".ogv"]:before,
+.livePreview .md a[href*="youtube.com/"]:before,
+.livePreview .md a[href*="youtu.be/"]:before,
+.livePreview .md a[href*="gfycat.com/"]:before,
+.livePreview .md a[href*="vimeo.com/"]:before,
+.livePreview .md a[href*="vine.co/"]:before,
+.livePreview .md a[href*="veoh.com/"]:before,
+.livePreview .md a[href*="twitvid.com/"]:before,
+.livePreview .md a[href*="/video/"]:before,
+.livePreview .md a[href*="/videok/"]:before,
+.livePreview .md a[href*="/gvideos/"]:before,
+.livePreview .md a[href*="vine.co/"]:before,
+.livePreview .md a[href*="mediacrush.net/"]:before,
+.livePreview .md a[href*="vid.me/"]:before,
+.livePreview .md a[href*="arsenalist.com/"]:before,
+.livePreview .md a[href*="fitbamob.com/"]:before,
+.livePreview .md a[href*="streamable.com/"]:before,
+.livePreview .md a[href*="footytube.com/"]:before,
+.livePreview .md a[href*="gifyoutube.com/"]:before,
+.livePreview .md a[href*="offsided.com/"]:before,
+.livePreview .md a[href*="video.gazzetta.it/"]:before,
+.livePreview .md a[href*="imgrush.com/"]:before,
+.livePreview .md a[href$=".avi"]:before,
+.livePreview .md a[href$=".mp4"]:before,
+.livePreview .md a[href$=".gif"]:before,
+.livePreview .md a[href$=".gifv"]:before,
+.livePreview .md a[href$=".webm"]:before,
+.livePreview .md a[href$=".ogg"]:before,
+.livePreview .md a[href$=".ogv"]:before {
+    display: inline-block;
+    content: "";
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background-image: url(%%icons%%);
+    background-repeat: no-repeat;
+    background-position: 0 60%;
+    margin-right: .5ex;
+}
+
+/* ===== end: video icon ===== */
+
+/* team crests from soccerbot */
+a[href^="#sprite"] {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background-image: url(%%sprites%%);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: auto;
+    color: transparent!important;
+    overflow: hidden;
+    cursor: default;
+    pointer-events: none;
+}
+
+a[href^="#sprite3"],
+a[href^="#sprite6"] {
+    width: 30px;
+}
+a[href^="#sprite6"] {
+    border: 1px solid #666;
+}
+
+h1 [href^="#sprite"] {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url(%%h1-sprites%%);}
+
+h1 [href^="#sprite3"],
+h1 [href^="#sprite6"] {
+    width: 60px;
+}
+
+h2 [href^="#sprite"] {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background-image: url(%%h2-sprites%%);}
+
+h2 [href^="#sprite3"],
+h2 [href^="#sprite6"] {
+    width: 54px;
+}
+
+h3 [href^="#sprite"] {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url(%%h3-sprites%%);}
+
+h3 [href^="#sprite3"],
+h3 [href^="#sprite6"] {
+    width: 48px;
+}
+
+h4 [href^="#sprite"] {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-image: url(%%h4-sprites%%);}
+
+h4 [href^="#sprite3"],
+h4 [href^="#sprite6"] {
+    width: 42px;
+}
+
+
+h5 [href^="#sprite"] {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(%%h5-sprites%%);}
+
+h5 [href^="#sprite3"],
+h5 [href^="#sprite6"] {
+    width: 36px;
+}
+
+
+/* Delete this if you want to allow crests in the comments */
+.comment a[href^="#sprite"] {
+    display: none!important;
+}
+
+a[href="#sprite1-p205"]{background-position:12% 4%} /* 1. FSV Mainz 05 */
+a[href="#sprite1-p12"]{background-position:12% 8%} /* Borussia Dortmund */
+a[href="#sprite4-p477"]{background-position:12% 12%} /* FC Ingolstadt */
+a[href="#sprite1-p79"]{background-position:12% 16%} /* FC Schalke 04 */
+a[href="#sprite1-p74"]{background-position:12% 20%} /* Hamburger SV */
+a[href="#sprite1-p177"]{background-position:12% 24%} /* Hannover 96 */
+a[href="#sprite1-p134"]{background-position:12% 28%} /* Borussia Mönchengladbach */
+a[href="#sprite1-p489"]{background-position:12% 32%} /* SV Darmstadt 98 */
+a[href="#sprite1-p68"]{background-position:12% 36%} /* VfB Stuttgart */
+a[href="#sprite1-p291"]{background-position:12% 40%} /* FC Augsburg */
+a[href="#sprite1-p353"]{background-position:12% 44%} /* 1899 Hoffenheim */
+a[href="#sprite1-p125"]{background-position:12% 48%} /* 1. FC Köln */
+a[href="#sprite1-p86"]{background-position:12% 52%} /* Eintracht Frankfurt */
+a[href="#sprite1-p132"]{background-position:12% 56%} /* Bayer 04 Leverkusen */
+a[href="#sprite1-p4"]{background-position:12% 60%} /* Chelsea */
+a[href="#sprite1-p3"]{background-position:12% 64%} /* Liverpool */
+a[href="#sprite1-p10"]{background-position:12% 68%} /* Manchester City */
+a[href="#sprite1-p2"]{background-position:12% 72%} /* Manchester United */
+a[href="#sprite1-p64"]{background-position:12% 76%} /* Werder Bremen */
+a[href="#sprite1-p121"]{background-position:12% 80%} /* Hertha BSC */
+a[href="#sprite1-p1"]{background-position:12% 84%} /* Arsenal */
+a[href="#sprite1-p76"]{background-position:12% 88%} /* Atlético Madrid */
+a[href="#sprite1-p107"]{background-position:12% 92%} /* Valencia */
+a[href="#sprite1-p8"]{background-position:12% 96%} /* Bayern München */
+a[href="#sprite1-p427"]{background-position:12% 100%} /* VfL Wolfsburg */
+a[href="#sprite1-p171"]{background-position:24% 4%} /* Athletic Club */
+a[href="#sprite1-p149"]{background-position:24% 8%} /* Fiorentina */
+a[href="#sprite1-p36"]{background-position:24% 12%} /* AS Roma */
+a[href="#sprite1-p6"]{background-position:24% 16%} /* Barcelona */
+a[href="#sprite1-p189"]{background-position:24% 20%} /* Lazio */
+a[href="#sprite1-p17"]{background-position:24% 24%} /* Juventus */
+a[href="#sprite1-p75"]{background-position:24% 28%} /* Napoli */
+a[href="#sprite1-p106"]{background-position:24% 32%} /* Olympique Lyonnais */
+a[href="#sprite1-p119"]{background-position:24% 36%} /* Olympique de Marseille */
+a[href="#sprite1-p26"]{background-position:24% 40%} /* Benfica */
+a[href="#sprite1-p37"]{background-position:24% 44%} /* FC Porto */
+a[href="#sprite1-p52"]{background-position:24% 48%} /* Sporting Clube de Portugal */
+a[href="#sprite5-p14"]{background-position:24% 52%} /* RB Leipzig */
+a[href="#sprite1-p154"]{background-position:24% 56%} /* SC Freiburg */
+a[href="#sprite6-p2"]{background-position:25% 60%} /* Albania */
+a[href="#sprite6-p10"]{background-position:25% 64%} /* Austria */
+a[href="#sprite1-p186"]{background-position:24% 68%} /* Mónaco */
+a[href="#sprite1-p13"]{background-position:24% 72%} /* AC Milan */
+a[href="#sprite6-p46"]{background-position:25% 76%} /* Czech Republic */
+a[href="#sprite6-p222"]{background-position:25% 80%} /* England */
+a[href="#sprite6-p43"]{background-position:25% 84%} /* Croatia */
+a[href="#sprite6-p17"]{background-position:25% 88%} /* Belgium */
+a[href="#sprite6-p74"]{background-position:25% 92%} /* Hungary */
+a[href="#sprite6-p60"]{background-position:25% 96%} /* France */
+a[href="#sprite1-p35"]{background-position:24% 100%} /* Paris Saint-Germain */
+a[href="#sprite6-p225"]{background-position:37.5% 4%} /* Northern Ireland */
+a[href="#sprite6-p138"]{background-position:37.5% 8%} /* Poland */
+a[href="#sprite6-p139"]{background-position:37.5% 12%} /* Portugal */
+a[href="#sprite6-p141"]{background-position:37.5% 16%} /* Romania */
+a[href="#sprite6-p142"]{background-position:37.5% 20%} /* Russia */
+a[href="#sprite6-p82"]{background-position:37.5% 24%} /* Italy */
+a[href="#sprite6-p80"]{background-position:37.5% 28%} /* Ireland */
+a[href="#sprite6-p156"]{background-position:37.5% 32%} /* Slovakia */
+a[href="#sprite6-p166"]{background-position:37.5% 36%} /* Sweden */
+a[href="#sprite6-p75"]{background-position:37.5% 40%} /* Iceland */
+a[href="#sprite6-p167"]{background-position:37.5% 44%;border:0} /* Switzerland */
+a[href="#sprite6-p177"]{background-position:37.5% 48%} /* Turkey */
+a[href="#sprite6-p224"]{background-position:37.5% 52%} /* Wales */
+a[href="#sprite6-p118"]{background-position:37.5% 56%} /* Morocco */
+a[href="#sprite6-p64"]{background-position:37.5% 60%} /* Germany */
+a[href="#sprite6-p22"]{background-position:37.5% 64%} /* Bosnia-Herzegovina */
+a[href="#sprite6-p181"]{background-position:37.5% 68%} /* Ukraine */
+a[href="#sprite6-p117"]{background-position:37.5% 72%} /* Montenegro */
+a[href="#sprite6-p161"]{background-position:37.5% 76%} /* Spain */
+a[href="#sprite6-p124"]{background-position:37.5% 80%} /* Netherlands */
+a[href="#sprite6-p152"]{background-position:37.5% 84%} /* Serbia */
+a[href="#sprite6-p129"]{background-position:37.5% 88%} /* Norway */
+a[href="#sprite6-p7"]{background-position:37.5% 92%} /* Argentina */
+a[href="#sprite6-p47"]{background-position:37.5% 96%} /* Denmark */
+a[href="#sprite6-p24"]{background-position:37.5% 100%} /* Brazil */
+a[href="#sprite6-p37"]{background-position:50% 4%} /* Colombia */
+a[href="#sprite6-p35"]{background-position:50% 8%} /* Chile */
+a[href="#sprite6-p135"]{background-position:50% 12%} /* Paraguay */
+a[href="#sprite6-p157"]{background-position:50% 16%} /* Slovenia */
+a[href="#sprite6-p189"]{background-position:50% 20%} /* Venezuela */
+a[href="#sprite6-p184"]{background-position:50% 24%} /* United States */
+a[href="#sprite6-p3"]{background-position:50% 28%} /* Algeria */
+a[href="#sprite6-p185"]{background-position:50% 32%} /* Uruguay */
+a[href="#sprite6-p65"]{background-position:50% 36%} /* Ghana */
+a[href="#sprite6-p136"]{background-position:50% 40%} /* Peru */
+a[href="#sprite6-p42"]{background-position:50% 44%} /* Côte d'Ivoire */
+a[href="#sprite6-p176"]{background-position:50% 48%} /* Tunisia */
+a[href="#sprite6-p128"]{background-position:50% 52%} /* Nigeria */
+a[href="#sprite6-p30"]{background-position:50% 56%} /* Cameroon */
+a[href="#sprite1-p5"]{background-position:48% 60%} /* Tottenham Hotspur */
+a[href="#sprite1-p25"]{background-position:48% 64%} /* Internazionale */
+a[href="#sprite1-p9"]{background-position:48% 68%} /* Real Madrid */
+a[href="#sprite1-pCL"]{background-position:48% 72%} /* CL */
+a[href="#sprite1-pDFB"]{background-position:48% 76%} /* DFB */
+a[href="#sprite1-pBL"]{background-position:48% 80%} /* BL */
+a[href="#sprite1-pLipp"]{background-position:48% 84%} /* Lippstadt */
+a[href="#sprite1-p254"]{background-position:48% 88%} /* 1860 */
+a[href="#sprite1-pJena"]{background-position:48% 92%} /* Jena */
+a[href="#sprite1-p120"]{background-position:48% 96%} /* PSV */
+a[href="#sprite2-p192"]{background-position:48% 100%} /* Rostov */
+
+
+/* copa logo */
+
+a[href="#copa60"] {
+    display: inline-block;
+    width: 67px;
+    height: 60px;
+    vertical-align: middle;
+    background-image: url(%%copa60%%);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: auto;
+    color: transparent!important;
+    overflow: hidden;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* Delete this if you want to allow crests in the comments */
+.comment a[href="#copa60"] {
+    display: none!important;
+}
+
+/* euro logo */
+
+a[href="#euro60"] {
+    display: inline-block;
+    width: 63px;
+    height: 60px;
+    vertical-align: middle;
+    background-image: url(%%euro60%%);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: auto;
+    color: transparent!important;
+    overflow: hidden;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* Delete this if you want to allow crests in the comments */
+.comment a[href="#euro60"] {
+    display: none!important;
+}
+
+/* team crests from soccerbot for match-thread archive*/
+a[href^="#a-sprite"] {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background-image: url(%%archive-sprites%%);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: auto;
+    color: transparent!important;
+    overflow: hidden;
+    cursor: default;
+    pointer-events: none;
+}
+a[href^="#a-sprite3"],
+a[href^="#a-sprite6"] {
+    width: 30px;
+}
+a[href^="#a-sprite6"] {
+    border: 1px solid #666;
+}
+/* Delete this if you want to allow crests in the comments */
+.comment a[href^="#a-sprite"] {
+    display: none!important;
+}
+a[href="#a-sprite1-p260"]{background-position:12% 4%} /* Karlsruher SC */
+a[href="#a-sprite1-p317"]{background-position:12% 8%} /* VfL Bochum */
+a[href="#a-sprite1-p197"]{background-position:12% 12%} /* Dinamo Zagreb */
+a[href="#a-sprite1-p387"]{background-position:12% 16%} /* Guangzhou Evergrande Taobao */
+a[href="#a-sprite1-p398"]{background-position:12% 20%} /* Dynamo Dresden */
+a[href="#a-sprite1-p139"]{background-position:12% 24%} /* Olympiacos */
+a[href="#a-sprite1-pNott"]{background-position:12% 28%} /* Nöttingen*/
+
+
+/* === start: bars =========== */
+
+a[href^="#bar"] {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 1.25em;
+    height: 1.5em;
+    line-height: 1.5em;
+    text-align: center;
+    vertical-align: middle;
+    color: white!important;
+    background-color: gray;
+    font-size: 1em;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* Delete this if you want to allow bars in the comments */
+.comment a[href^="#bar"] {
+    display: none;
+}
+
+a[href^="#bar-2"]{width: 2.5em}
+a[href^="#bar-3"]{width: 4em}
+a[href^="#bar-4"]{width: 5.5em}
+a[href^="#bar-5"]{width: 7em}
+a[href^="#bar-6"]{width: 8.5em}
+a[href^="#bar-7"]{width: 10em}
+a[href^="#bar-8"]{width: 11.5em}
+a[href^="#bar-9"]{width: 13em}
+a[href^="#bar-10"]{width: 14.5em}
+a[href^="#bar-11"]{width: 16em}
+a[href^="#bar-12"]{width: 17.5em}
+a[href^="#bar-13"]{width: 19em}
+a[href^="#bar-14"]{width: 20.5em}
+a[href^="#bar-15"]{width: 22em}
+a[href^="#bar-16"]{width: 23.5em}
+a[href^="#bar"][href$="-black"]{background-color: #2c2c2c}
+a[href^="#bar"][href$="-red"]{background-color: #ea2212}
+a[href^="#bar"][href$="-blue"]{background-color: #273a99}
+a[href^="#bar"][href$="-green"]{background-color: #282}
+a[href^="#bar"][href$="-white"]{background-color: white; color: #222!important; border: 1px solid silver}
+a[href^="#bar"][href$="-skyblue"]{background-color: #5cbfeb; color: #222!important}
+a[href^="#bar"][href$="-orange"]{background-color: #fdb913; color: #222!important}
+a[href^="#bar"][href$="-yellow"]{background-color: #ffe512; color: #222!important}
+a[href^="#bar"][href$="-claret"]{background-color: #801638}
+a[href^="#bar"][href$="-gray"]{background-color: gray}
+
+/* ===== end: bars =========== */
+
+/* ===== start: link flair === */
+
+/* It is recommended that you keep these two rules to help flair display correctly */
+a.title {
+    vertical-align: middle;
+}
+.link.compressed .title {
+    margin-top: 0;
+}
+
+a.title:before {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: top;
+    background-image: url(%%icons-big%%);
+    background-position: -999px -999px;
+    background-repeat: no-repeat;
+    margin-right: 4px;
+}
+
+.linkflair a.title:before,
+.organic-listing a.title:before {
+    display: none!important;
+}
+
+/* Videos/GIFs (if you use link flair for videos then delete this) */
+a.title[href*="youtube.com/"]:before,
+a.title[href*="youtu.be/"]:before,
+a.title[href*="gfycat.com/"]:before,
+a.title[href*="vimeo.com/"]:before,
+a.title[href*="vine.co/"]:before,
+a.title[href*="veoh.com/"]:before,
+a.title[href*="twitvid.com/"]:before,
+a.title[href*="/video/"]:before,
+a.title[href*="/videok/"]:before,
+a.title[href*="/gvideos/"]:before,
+a.title[href*="vine.co/"]:before,
+a.title[href*="mediacrush.net/"]:before,
+a.title[href*="vid.me/"]:before,
+a.title[href*="arsenalist.com/"]:before,
+a.title[href*="fitbamob.com/"]:before,
+a.title[href*="streamable.com/"]:before,
+a.title[href*="footytube.com/"]:before,
+a.title[href*="gifyoutube.com/"]:before,
+a.title[href*="offsided.com/"]:before,
+a.title[href*="video.gazzetta.it/"]:before,
+a.title[href*="imgrush.com/"]:before,
+a.title[href$=".avi"]:before,
+a.title[href$=".mp4"]:before,
+a.title[href$=".gif"]:before,
+a.title[href$=".gifv"]:before,
+a.title[href$=".webm"]:before,
+a.title[href$=".ogg"]:before,
+a.title[href$=".ogv"]:before {
+    content: "";
+    background-position: 0 22.5%;
+}
+
+/* Twitter */
+a.title[href^="https://twitter.com/"]:before {
+    content: "";
+    background-position: 0 55%;
+}
+
+
+/* Flags*/
+
+a[href^="//#"] {
+    display: inline-block;
+    line-height: normal;
+    background-repeat: no-repeat;
+    background-image: url(%%flags%%);
+    vertical-align: middle;
+    padding: 0;
+    border-width: 0;
+    background-color: transparent;
+    cursor: default;
+}
+
+.comment a[href^="//#"] {
+    display: none!important;
+}
+
+
+a[href^="//#ad"]{ background-position: 0 0; width: 16px; height: 11px; }
+a[href^="//#ae"]{ background-position: 0 -61px; width: 16px; height: 11px; }
+a[href^="//#af"]{ background-position: 0 -122px; width: 16px; height: 11px; }
+a[href^="//#ag"]{ background-position: 0 -183px; width: 16px; height: 11px; }
+a[href^="//#ai"]{ background-position: 0 -244px; width: 16px; height: 11px; }
+a[href^="//#al"]{ background-position: 0 -305px; width: 16px; height: 11px; }
+a[href^="//#am"]{ background-position: 0 -366px; width: 16px; height: 11px; }
+a[href^="//#an"]{ background-position: 0 -427px; width: 16px; height: 11px; }
+a[href^="//#ao"]{ background-position: 0 -488px; width: 16px; height: 11px; }
+a[href^="//#ar"]{ background-position: 0 -549px; width: 16px; height: 11px; }
+a[href^="//#as"]{ background-position: 0 -610px; width: 16px; height: 11px; }
+a[href^="//#at"]{ background-position: 0 -671px; width: 16px; height: 11px; }
+a[href^="//#au"]{ background-position: 0 -732px; width: 16px; height: 11px; }
+a[href^="//#aw"]{ background-position: 0 -793px; width: 16px; height: 11px; }
+a[href^="//#ax"]{ background-position: 0 -854px; width: 16px; height: 11px; }
+a[href^="//#az"]{ background-position: 0 -915px; width: 16px; height: 11px; }
+a[href^="//#ba"]{ background-position: 0 -976px; width: 16px; height: 11px; }
+a[href^="//#bb"]{ background-position: 0 -1037px; width: 16px; height: 11px; }
+a[href^="//#bd"]{ background-position: 0 -1098px; width: 16px; height: 11px; }
+a[href^="//#be"]{ background-position: 0 -1159px; width: 16px; height: 11px; }
+a[href^="//#bf"]{ background-position: 0 -1220px; width: 16px; height: 11px; }
+a[href^="//#bg"]{ background-position: 0 -1281px; width: 16px; height: 11px; }
+a[href^="//#bh"]{ background-position: 0 -1342px; width: 16px; height: 11px; }
+a[href^="//#bi"]{ background-position: 0 -1403px; width: 16px; height: 11px; }
+a[href^="//#bj"]{ background-position: 0 -1464px; width: 16px; height: 11px; }
+a[href^="//#bm"]{ background-position: 0 -1525px; width: 16px; height: 11px; }
+a[href^="//#bn"]{ background-position: 0 -1586px; width: 16px; height: 11px; }
+a[href^="//#bo"]{ background-position: 0 -1647px; width: 16px; height: 11px; }
+a[href^="//#br"]{ background-position: 0 -1708px; width: 16px; height: 11px; }
+a[href^="//#bs"]{ background-position: 0 -1769px; width: 16px; height: 11px; }
+a[href^="//#bt"]{ background-position: 0 -1830px; width: 16px; height: 11px; }
+a[href^="//#bv"]{ background-position: 0 -1891px; width: 16px; height: 11px; }
+a[href^="//#bw"]{ background-position: -66px 0; width: 16px; height: 11px; }
+a[href^="//#by"]{ background-position: -66px -61px; width: 16px; height: 11px; }
+a[href^="//#bz"]{ background-position: -66px -122px; width: 16px; height: 11px; }
+a[href^="//#ca"]{ background-position: -66px -183px; width: 16px; height: 11px; }
+a[href^="//#catalonia"]{ background-position: -66px -244px; width: 16px; height: 11px; }
+a[href^="//#cc"]{ background-position: -66px -305px; width: 16px; height: 11px; }
+a[href^="//#cd"]{ background-position: -66px -366px; width: 16px; height: 11px; }
+a[href^="//#cf"]{ background-position: -66px -427px; width: 16px; height: 11px; }
+a[href^="//#cg"]{ background-position: -66px -488px; width: 16px; height: 11px; }
+a[href^="//#ch"]{ background-position: -66px -549px; width: 11px; height: 11px; }
+a[href^="//#ci"]{ background-position: -66px -610px; width: 16px; height: 11px; }
+a[href^="//#ck"]{ background-position: -66px -671px; width: 16px; height: 11px; }
+a[href^="//#cl"]{ background-position: -66px -732px; width: 16px; height: 11px; }
+a[href^="//#cm"]{ background-position: -66px -793px; width: 16px; height: 11px; }
+a[href^="//#cn"]{ background-position: -66px -854px; width: 16px; height: 11px; }
+a[href^="//#co"]{ background-position: -66px -915px; width: 16px; height: 11px; }
+a[href^="//#cr"]{ background-position: -66px -976px; width: 16px; height: 11px; }
+a[href^="//#cs"]{ background-position: -66px -1037px; width: 16px; height: 11px; }
+a[href^="//#cu"]{ background-position: -66px -1098px; width: 16px; height: 11px; }
+a[href^="//#cv"]{ background-position: -66px -1159px; width: 16px; height: 11px; }
+a[href^="//#cx"]{ background-position: -66px -1220px; width: 16px; height: 11px; }
+a[href^="//#cy"]{ background-position: -66px -1281px; width: 16px; height: 11px; }
+a[href^="//#cz"]{ background-position: -66px -1342px; width: 16px; height: 11px; }
+a[href^="//#de"]{ background-position: -66px -1403px; width: 16px; height: 11px; }
+a[href^="//#dj"]{ background-position: -66px -1464px; width: 16px; height: 11px; }
+a[href^="//#dk"]{ background-position: -66px -1525px; width: 16px; height: 11px; }
+a[href^="//#dm"]{ background-position: -66px -1586px; width: 16px; height: 11px; }
+a[href^="//#do"]{ background-position: -66px -1647px; width: 16px; height: 11px; }
+a[href^="//#dz"]{ background-position: -66px -1708px; width: 16px; height: 11px; }
+a[href^="//#ec"]{ background-position: -66px -1769px; width: 16px; height: 11px; }
+a[href^="//#ee"]{ background-position: -66px -1830px; width: 16px; height: 11px; }
+a[href^="//#eg"]{ background-position: -66px -1891px; width: 16px; height: 11px; }
+a[href^="//#eh"]{ background-position: -132px 0; width: 16px; height: 11px; }
+a[href^="//#england"]{ background-position: -132px -61px; width: 16px; height: 11px; }
+a[href^="//#er"]{ background-position: -132px -122px; width: 16px; height: 11px; }
+a[href^="//#es"]{ content: "Spain"; background-position: -132px -183px; width: 16px; height: 11px; }
+a[href^="//#et"]{ background-position: -132px -244px; width: 16px; height: 11px; }
+a[href^="//#europeanunion"]{ background-position: -132px -305px; width: 16px; height: 11px; }
+a[href^="//#fam"]{ background-position: -132px -366px; width: 16px; height: 11px; }
+a[href^="//#fi"]{ background-position: -132px -427px; width: 16px; height: 11px; }
+a[href^="//#fj"]{ background-position: -132px -488px; width: 16px; height: 11px; }
+a[href^="//#fk"]{ background-position: -132px -549px; width: 16px; height: 11px; }
+a[href^="//#fm"]{ background-position: -132px -610px; width: 16px; height: 11px; }
+a[href^="//#fo"]{ background-position: -132px -671px; width: 16px; height: 11px; }
+a[href^="//#fr"]{ background-position: -132px -732px; width: 16px; height: 11px; }
+a[href^="//#ga"]{ background-position: -132px -793px; width: 16px; height: 11px; }
+a[href^="//#gb"]{ background-position: -132px -854px; width: 16px; height: 11px; }
+a[href^="//#gd"]{ background-position: -132px -915px; width: 16px; height: 11px; }
+a[href^="//#ge"]{ background-position: -132px -976px; width: 16px; height: 11px; }
+a[href^="//#gf"]{ background-position: -132px -1037px; width: 16px; height: 11px; }
+a[href^="//#gh"]{ background-position: -132px -1098px; width: 16px; height: 11px; }
+a[href^="//#gi"]{ background-position: -132px -1159px; width: 16px; height: 11px; }
+a[href^="//#gl"]{ background-position: -132px -1220px; width: 16px; height: 11px; }
+a[href^="//#gm"]{ background-position: -132px -1281px; width: 16px; height: 11px; }
+a[href^="//#gn"]{ background-position: -132px -1342px; width: 16px; height: 11px; }
+a[href^="//#gp"]{ background-position: -132px -1403px; width: 16px; height: 11px; }
+a[href^="//#gq"]{ background-position: -132px -1464px; width: 16px; height: 11px; }
+a[href^="//#gr"]{ background-position: -132px -1525px; width: 16px; height: 11px; }
+a[href^="//#gs"]{ background-position: -132px -1586px; width: 16px; height: 11px; }
+a[href^="//#gt"]{ background-position: -132px -1647px; width: 16px; height: 11px; }
+a[href^="//#gu"]{ background-position: -132px -1708px; width: 16px; height: 11px; }
+a[href^="//#gw"]{ background-position: -132px -1769px; width: 16px; height: 11px; }
+a[href^="//#gy"]{ background-position: -132px -1830px; width: 16px; height: 11px; }
+a[href^="//#hk"]{ background-position: -132px -1891px; width: 16px; height: 11px; }
+a[href^="//#hm"]{ background-position: -198px 0; width: 16px; height: 11px; }
+a[href^="//#hn"]{ background-position: -198px -61px; width: 16px; height: 11px; }
+a[href^="//#hr"]{ background-position: -198px -122px; width: 16px; height: 11px; }
+a[href^="//#ht"]{ background-position: -198px -183px; width: 16px; height: 11px; }
+a[href^="//#hu"]{ background-position: -198px -244px; width: 16px; height: 11px; }
+a[href^="//#id"]{ background-position: -198px -305px; width: 16px; height: 11px; }
+a[href^="//#ie"]{ background-position: -198px -366px; width: 16px; height: 11px; }
+a[href^="//#il"]{ background-position: -198px -427px; width: 16px; height: 11px; }
+a[href^="//#in"]{ background-position: -198px -488px; width: 16px; height: 11px; }
+a[href^="//#io"]{ background-position: -198px -549px; width: 16px; height: 11px; }
+a[href^="//#iq"]{ background-position: -198px -610px; width: 16px; height: 11px; }
+a[href^="//#ir"]{ background-position: -198px -671px; width: 16px; height: 11px; }
+a[href^="//#is"]{ background-position: -198px -732px; width: 16px; height: 11px; }
+a[href^="//#it"]{ background-position: -198px -793px; width: 16px; height: 11px; }
+a[href^="//#jm"]{ background-position: -198px -854px; width: 16px; height: 11px; }
+a[href^="//#jo"]{ background-position: -198px -915px; width: 16px; height: 11px; }
+a[href^="//#jp"]{ background-position: -198px -976px; width: 16px; height: 11px; }
+a[href^="//#ke"]{ background-position: -198px -1037px; width: 16px; height: 11px; }
+a[href^="//#kg"]{ background-position: -198px -1098px; width: 16px; height: 11px; }
+a[href^="//#kh"]{ background-position: -198px -1159px; width: 16px; height: 11px; }
+a[href^="//#ki"]{ background-position: -198px -1220px; width: 16px; height: 11px; }
+a[href^="//#km"]{ background-position: -198px -1281px; width: 16px; height: 11px; }
+a[href^="//#kn"]{ background-position: -198px -1342px; width: 16px; height: 11px; }
+a[href^="//#kp"]{ background-position: -198px -1403px; width: 16px; height: 11px; }
+a[href^="//#kr"]{ background-position: -198px -1464px; width: 16px; height: 11px; }
+a[href^="//#kw"]{ background-position: -198px -1525px; width: 16px; height: 11px; }
+a[href^="//#ky"]{ background-position: -198px -1586px; width: 16px; height: 11px; }
+a[href^="//#kz"]{ background-position: -198px -1647px; width: 16px; height: 11px; }
+a[href^="//#la"]{ background-position: -198px -1708px; width: 16px; height: 11px; }
+a[href^="//#lb"]{ background-position: -198px -1769px; width: 16px; height: 11px; }
+a[href^="//#lc"]{ background-position: -198px -1830px; width: 16px; height: 11px; }
+a[href^="//#li"]{ background-position: -198px -1891px; width: 16px; height: 11px; }
+a[href^="//#lk"]{ background-position: -264px 0; width: 16px; height: 11px; }
+a[href^="//#lr"]{ background-position: -264px -61px; width: 16px; height: 11px; }
+a[href^="//#ls"]{ background-position: -264px -122px; width: 16px; height: 11px; }
+a[href^="//#lt"]{ background-position: -264px -183px; width: 16px; height: 11px; }
+a[href^="//#lu"]{ background-position: -264px -244px; width: 16px; height: 11px; }
+a[href^="//#lv"]{ background-position: -264px -305px; width: 16px; height: 11px; }
+a[href^="//#ly"]{ background-position: -264px -366px; width: 16px; height: 11px; }
+a[href^="//#ma"]{ background-position: -264px -427px; width: 16px; height: 11px; }
+a[href^="//#mc"]{ background-position: -264px -488px; width: 16px; height: 11px; }
+a[href^="//#md"]{ background-position: -264px -549px; width: 16px; height: 11px; }
+a[href^="//#me"]{ background-position: -264px -610px; width: 16px; height: 12px; }
+a[href^="//#mg"]{ background-position: -264px -672px; width: 16px; height: 11px; }
+a[href^="//#mh"]{ background-position: -264px -733px; width: 16px; height: 11px; }
+a[href^="//#mk"]{ background-position: -264px -794px; width: 16px; height: 11px; }
+a[href^="//#ml"]{ background-position: -264px -855px; width: 16px; height: 11px; }
+a[href^="//#mm"]{ background-position: -264px -916px; width: 16px; height: 11px; }
+a[href^="//#mn"]{ background-position: -264px -977px; width: 16px; height: 11px; }
+a[href^="//#mo"]{ background-position: -264px -1038px; width: 16px; height: 11px; }
+a[href^="//#mp"]{ background-position: -264px -1099px; width: 16px; height: 11px; }
+a[href^="//#mq"]{ background-position: -264px -1160px; width: 16px; height: 11px; }
+a[href^="//#mr"]{ background-position: -264px -1221px; width: 16px; height: 11px; }
+a[href^="//#ms"]{ background-position: -264px -1282px; width: 16px; height: 11px; }
+a[href^="//#mt"]{ background-position: -264px -1343px; width: 16px; height: 11px; }
+a[href^="//#mu"]{ background-position: -264px -1404px; width: 16px; height: 11px; }
+a[href^="//#mv"]{ background-position: -264px -1465px; width: 16px; height: 11px; }
+a[href^="//#mw"]{ background-position: -264px -1526px; width: 16px; height: 11px; }
+a[href^="//#mx"]{ background-position: -264px -1587px; width: 16px; height: 11px; }
+a[href^="//#my"]{ background-position: -264px -1648px; width: 16px; height: 11px; }
+a[href^="//#mz"]{ background-position: -264px -1709px; width: 16px; height: 11px; }
+a[href^="//#na"]{ background-position: -264px -1770px; width: 16px; height: 11px; }
+a[href^="//#nc"]{ background-position: -264px -1831px; width: 16px; height: 11px; }
+a[href^="//#ne"]{ background-position: -264px -1892px; width: 16px; height: 11px; }
+a[href^="//#nf"]{ background-position: -330px 0; width: 16px; height: 11px; }
+a[href^="//#ng"]{ background-position: -330px -61px; width: 16px; height: 11px; }
+a[href^="//#ni"]{ background-position: -330px -122px; width: 16px; height: 11px; }
+a[href^="//#nl"]{ background-position: -330px -183px; width: 16px; height: 11px; }
+a[href^="//#no"]{ background-position: -330px -244px; width: 16px; height: 11px; }
+a[href^="//#np"]{ background-position: -330px -305px; width: 9px; height: 11px; }
+a[href^="//#nr"]{ background-position: -330px -366px; width: 16px; height: 11px; }
+a[href^="//#nu"]{ background-position: -330px -427px; width: 16px; height: 11px; }
+a[href^="//#nz"]{ background-position: -330px -488px; width: 16px; height: 11px; }
+a[href^="//#om"]{ background-position: -330px -549px; width: 16px; height: 11px; }
+a[href^="//#pa"]{ background-position: -330px -610px; width: 16px; height: 11px; }
+a[href^="//#pe"]{ background-position: -330px -671px; width: 16px; height: 11px; }
+a[href^="//#pf"]{ background-position: -330px -732px; width: 16px; height: 11px; }
+a[href^="//#pg"]{ background-position: -330px -793px; width: 16px; height: 11px; }
+a[href^="//#ph"]{ background-position: -330px -854px; width: 16px; height: 11px; }
+a[href^="//#pk"]{ background-position: -330px -915px; width: 16px; height: 11px; }
+a[href^="//#pl"]{ background-position: -330px -976px; width: 16px; height: 11px; }
+a[href^="//#pm"]{ background-position: -330px -1037px; width: 16px; height: 11px; }
+a[href^="//#pn"]{ background-position: -330px -1098px; width: 16px; height: 11px; }
+a[href^="//#pr"]{ background-position: -330px -1159px; width: 16px; height: 11px; }
+a[href^="//#ps"]{ background-position: -330px -1220px; width: 16px; height: 11px; }
+a[href^="//#pt"]{ background-position: -330px -1281px; width: 16px; height: 11px; }
+a[href^="//#pw"]{ background-position: -330px -1342px; width: 16px; height: 11px; }
+a[href^="//#py"]{ background-position: -330px -1403px; width: 16px; height: 11px; }
+a[href^="//#qa"]{ background-position: -330px -1464px; width: 16px; height: 11px; }
+a[href^="//#re"]{ background-position: -330px -1525px; width: 16px; height: 11px; }
+a[href^="//#ro"]{ background-position: -330px -1586px; width: 16px; height: 11px; }
+a[href^="//#rs"]{ background-position: -330px -1647px; width: 16px; height: 11px; }
+a[href^="//#ru"]{ background-position: -330px -1708px; width: 16px; height: 11px; }
+a[href^="//#rw"]{ background-position: -330px -1769px; width: 16px; height: 11px; }
+a[href^="//#sa"]{ background-position: -330px -1830px; width: 16px; height: 11px; }
+a[href^="//#sb"]{ background-position: -330px -1891px; width: 16px; height: 11px; }
+a[href^="//#sc"]{ background-position: -396px 0; width: 16px; height: 11px; }
+a[href^="//#scotland"]{ background-position: -396px -61px; width: 16px; height: 11px; }
+a[href^="//#sd"]{ background-position: -396px -122px; width: 16px; height: 11px; }
+a[href^="//#se"]{ background-position: -396px -183px; width: 16px; height: 11px; }
+a[href^="//#sg"]{ background-position: -396px -244px; width: 16px; height: 11px; }
+a[href^="//#sh"]{ background-position: -396px -305px; width: 16px; height: 11px; }
+a[href^="//#si"]{ background-position: -396px -366px; width: 16px; height: 11px; }
+a[href^="//#sj"]{ background-position: -396px -427px; width: 16px; height: 11px; }
+a[href^="//#sk"]{ background-position: -396px -488px; width: 16px; height: 11px; }
+a[href^="//#sl"]{ background-position: -396px -549px; width: 16px; height: 11px; }
+a[href^="//#sm"]{ background-position: -396px -610px; width: 16px; height: 11px; }
+a[href^="//#sn"]{ background-position: -396px -671px; width: 16px; height: 11px; }
+a[href^="//#so"]{ background-position: -396px -732px; width: 16px; height: 11px; }
+a[href^="//#sr"]{ background-position: -396px -793px; width: 16px; height: 11px; }
+a[href^="//#st"]{ background-position: -396px -854px; width: 16px; height: 11px; }
+a[href^="//#sv"]{ background-position: -396px -915px; width: 16px; height: 11px; }
+a[href^="//#sy"]{ background-position: -396px -976px; width: 16px; height: 11px; }
+a[href^="//#sz"]{ background-position: -396px -1037px; width: 16px; height: 11px; }
+a[href^="//#tc"]{ background-position: -396px -1098px; width: 16px; height: 11px; }
+a[href^="//#td"]{ background-position: -396px -1159px; width: 16px; height: 11px; }
+a[href^="//#tf"]{ background-position: -396px -1220px; width: 16px; height: 11px; }
+a[href^="//#tg"]{ background-position: -396px -1281px; width: 16px; height: 11px; }
+a[href^="//#th"]{ background-position: -396px -1342px; width: 16px; height: 11px; }
+a[href^="//#tj"]{ background-position: -396px -1403px; width: 16px; height: 11px; }
+a[href^="//#tk"]{ background-position: -396px -1464px; width: 16px; height: 11px; }
+a[href^="//#tl"]{ background-position: -396px -1525px; width: 16px; height: 11px; }
+a[href^="//#tm"]{ background-position: -396px -1586px; width: 16px; height: 11px; }
+a[href^="//#tn"]{ background-position: -396px -1647px; width: 16px; height: 11px; }
+a[href^="//#to"]{ background-position: -396px -1708px; width: 16px; height: 11px; }
+a[href^="//#tr"]{ background-position: -396px -1769px; width: 16px; height: 11px; }
+a[href^="//#tt"]{ background-position: -396px -1830px; width: 16px; height: 11px; }
+a[href^="//#tv"]{ background-position: -396px -1891px; width: 16px; height: 11px; }
+a[href^="//#tw"]{ background-position: -462px 0; width: 16px; height: 11px; }
+a[href^="//#tz"]{ background-position: -462px -61px; width: 16px; height: 11px; }
+a[href^="//#ua"]{ background-position: -462px -122px; width: 16px; height: 11px; }
+a[href^="//#ug"]{ background-position: -462px -183px; width: 16px; height: 11px; }
+a[href^="//#um"]{ background-position: -462px -244px; width: 16px; height: 11px; }
+a[href^="//#us"]{ background-position: -462px -305px; width: 16px; height: 11px; }
+a[href^="//#uy"]{ background-position: -462px -366px; width: 16px; height: 11px; }
+a[href^="//#uz"]{ background-position: -462px -427px; width: 16px; height: 11px; }
+a[href^="//#va"]{ background-position: -462px -488px; width: 16px; height: 11px; }
+a[href^="//#vc"]{ background-position: -462px -549px; width: 16px; height: 11px; }
+a[href^="//#ve"]{ background-position: -462px -610px; width: 16px; height: 11px; }
+a[href^="//#vg"]{ background-position: -462px -671px; width: 16px; height: 11px; }
+a[href^="//#vi"]{ background-position: -462px -732px; width: 16px; height: 11px; }
+a[href^="//#vn"]{ background-position: -462px -793px; width: 16px; height: 11px; }
+a[href^="//#vu"]{ background-position: -462px -854px; width: 16px; height: 11px; }
+a[href^="//#wales"]{ background-position: -462px -915px; width: 16px; height: 11px; }
+a[href^="//#wf"]{ background-position: -462px -976px; width: 16px; height: 11px; }
+a[href^="//#ws"]{ background-position: -462px -1037px; width: 16px; height: 11px; }
+a[href^="//#ye"]{ background-position: -462px -1098px; width: 16px; height: 11px; }
+a[href^="//#yt"]{ background-position: -462px -1159px; width: 16px; height: 11px; }
+a[href^="//#za"]{ background-position: -462px -1220px; width: 16px; height: 11px; }
+a[href^="//#zm"]{ background-position: -462px -1281px; width: 16px; height: 11px; }
+a[href^="//#zw"]{ background-position: -462px -1342px; width: 16px; height: 11px; }
+a[href^="//#nireland"]{ background-position: -462px -1403px; width: 16px; height: 11px; }
+
+
+/* small star for sidebar*/
+a[href^="//#sidestar"]{background-position:-467px -1890px; width: 11px; height: 11px;}
+
+.comment a[href^="#sidestar"] {
+    display: none!important;
+}
+
+
+/*Match Thread icons*/
+
+a[href^="#icon"] {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background-image: url(%%icons%%);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: -999px -999px;
+    color: transparent!important;
+    overflow: hidden;
+    cursor: default;
+    pointer-events: none;
+}
+
+a[href^="#icon"][href$="-big"] {
+    width: 24px;
+    height: 24px;
+    background-image: url(%%icons-big%%);
+}
+
+/* Delete this if you want to allow icons in the comments */
+.comment a[href^="#icon"] {
+    display: none;
+}
+
+/* Delete any icon that you don't want to allow */
+a[href^="#icon-alien"]{background-position:0 0%}
+a[href^="#icon-announcement"]{background-position:0 2.5%}
+a[href^="#icon-ball"]{background-position:0 5%}
+a[href^="#icon-beer"]{background-position:0 7.5%}
+a[href^="#icon-clock"]{background-position:0 10%}
+a[href^="#icon-down"]{background-position:0 12.5%}
+a[href^="#icon-flag"]{background-position:0 15%}
+a[href^="#icon-info"]{background-position:0 17.5%}
+a[href^="#icon-link"]{background-position:0 20%}
+a[href^="#icon-media"]{background-position:0 22.5%}
+a[href^="#icon-net"]{background-position:0 25%}
+a[href^="#icon-news"]{background-position:0 27.5%}
+a[href^="#icon-notes"]{background-position:0 30%}
+a[href^="#icon-red"]{background-position:0 37.5%}
+a[href^="#icon-red-ball"]{background-position:0 32.5%}
+a[href^="#icon-red-cross"]{background-position:0 35%}
+a[href^="#icon-self"]{background-position:0 40%}
+a[href^="#icon-star"]{background-position:0 42.5%}
+a[href^="#icon-stream"]{background-position:0 45%}
+a[href^="#icon-sub"]{background-position:0 47.5%}
+a[href^="#icon-trophy"]{background-position:0 50%}
+a[href^="#icon-turd"]{background-position:0 52.5%}
+a[href^="#icon-tweet"]{background-position:0 55%}
+a[href^="#icon-up"]{background-position:0 57.5%}
+a[href^="#icon-video"]{background-position:0 60%}
+a[href^="#icon-wc"]{background-position:0 62.5%}
+a[href^="#icon-whistle"]{background-position:0 65%}
+a[href^="#icon-xmas"]{background-position:0 67.5%}
+a[href^="#icon-yellow"]{background-position:0 70%}
+
+
+/* User flair */
+
+.flair[class*="flair-"] {
+    border: 0;
+    padding: 0;
+    vertical-align: middle;
+    background-image: url(%%flair-sheet-16-17%%);
+    background-repeat: no-repeat;
+    height: 15px;
+    line-height: 15px;
+    min-width: 27px;
+    text-indent: -9999em;
+    background-color: transparent;
+}
+
+.res-nightmode .flair[class*="flair-"] {
+    background-color: transparent;
+}
+
+.flair[class*="flair-"]:hover {
+    text-indent: 30px;
+    background-color: transparent;
+}
+
+.res-nightmode .flair[class*="flair-"]:hover {
+
+    background-color: grey;
+}
+
+
+.flair-1{ content: ""; background-position: 0 0; }
+.flair-2{ content: ""; background-position: 0 -30px;}
+.flair-3{ content: ""; background-position: 0 -60px; }
+.flair-4{ content: ""; background-position: 0 -90px;  }
+.flair-5{ content: ""; background-position: 0 -120px; }
+.flair-6{ content: ""; background-position: 0 -150px;  }
+.flair-7{ content: ""; background-position: 0 -180px;  }
+.flair-8{ content: ""; background-position: 0 -210px;  }
+.flair-9{ content: ""; background-position: 0 -240px;  }
+.flair-10{ content: ""; background-position: 0 -270px;  }
+.flair-11{ content: ""; background-position: 0 -300px; }
+.flair-12{ content: ""; background-position: 0 -330px;  }
+.flair-13{ content: ""; background-position: 0 -360px;  }
+.flair-14{ content: ""; background-position: 0 -390px;  }
+.flair-15{ content: ""; background-position: 0 -420px;  }
+.flair-16{ content: ""; background-position: 0 -450px;  }
+.flair-17{ content: ""; background-position: 0 -480px;  }
+.flair-18{ content: ""; background-position: 0 -510px;  }
+.flair-19{ content: ""; background-position: 0 -540px;  }
+.flair-20{ content: ""; background-position: 0 -570px;  }
+.flair-21{ content: ""; background-position: 0 -600px;  }
+.flair-22{ content: ""; background-position: 0 -630px;  }
+.flair-22tw{ content: ""; background-position: 0 -660px;  }
+.flair-23{ content: ""; background-position: 0 -690px;  }
+.flair-23tw{ content: ""; background-position: 0 -720px; }
+.flair-24{ content: ""; background-position: 0 -750px;  }
+.flair-25{ content: ""; background-position: 0 -780px;  }
+.flair-26tw{ content: ""; background-position: 0 -810px; }
+.flair-27{ content: ""; background-position: 0 -840px;  }
+.flair-28{ content: ""; background-position: 0 -870px;  }
+.flair-29{ content: ""; background-position: 0 -900px;  }
+.flair-30{ content: ""; background-position: 0 -930px;  }
+
+.flair-32{ content: ""; background-position: 0 -990px;  }
+.flair-33tw{ content: ""; background-position: 0 -1020px; }
+.flair-34{ content: ""; background-position: 0 -1050px; }
+.flair-35{ content: ""; background-position: 0 -1080px;  }
+.flair-36{ content: ""; background-position: 0 -1110px;  }
+.flair-37{ content: ""; background-position: 0 -1140px;  }
+.flair-38{ content: ""; background-position: 0 -1170px;  }
+.flair-39{ content: ""; background-position: 0 -1200px;  }
+.flair-40{ content: ""; background-position: 0 -1230px;  }
+.flair-maie{ content: ""; background-position: 0 -1260px;  }
+.flair-schw{ content: ""; background-position: 0 -1290px;  }
+.flair-beck{ content: ""; background-position: 0 -1320px;  }
+.flair-roth{ content: ""; background-position: 0 -1350px;  }
+.flair-muel{ content: ""; background-position: 0 -1380px; }
+.flair-hoen{ content: ""; background-position: 0 -1410px;  }
+.flair-duer{ content: ""; background-position: 0 -1440px;  }
+.flair-brei{ content: ""; background-position: 0 -1470px;  }
+.flair-dhoe{ content: ""; background-position: 0 -1500px;  }
+.flair-rumm{ content: ""; background-position: 0 -1530px;  }
+.flair-pflu{ content: ""; background-position: 0 -1560px;  }
+.flair-auge{ content: ""; background-position: 0 -1590px;  }
+.flair-wohl{ content: ""; background-position: 0 -1620px;  }
+.flair-mrum{ content: ""; background-position: 0 -1650px;  }
+.flair-kahn{ content: ""; background-position: 0 -1680px; }
+.flair-babb{ content: ""; background-position: 0 -1710px;  }
+.flair-helm{ content: ""; background-position: 0 -1740px;  }
+.flair-matt{ content: ""; background-position: 0 -1770px; }
+.flair-zieg{ content: ""; background-position: 0 -1800px;  }
+.flair-klin{ content: ""; background-position: 0 -1830px; }
+.flair-sagn{ content: ""; background-position: 0 -1860px;  }
+.flair-liza{ content: ""; background-position: 0 -1890px;  }
+.flair-schol{ content: ""; background-position: 0 -1920px;  }
+.flair-elbe{ content: ""; background-position: 0 -1950px;  }
+.flair-effe{ content: ""; background-position: 0 -1980px;  }
+.flair-jere{ content: ""; background-position: 0 -2010px;  }
+.flair-sali{ content: ""; background-position: 0 -2040px; }
+.flair-zero{ content: ""; background-position: 0 -2070px;  }
+.flair-ball{ content: ""; background-position: 0 -2100px;  }
+.flair-piza{ content: ""; background-position: 0 -2130px;  }
+.flair-harg{ content: ""; background-position: 0 -2160px;  }
+.flair-luci{ content: ""; background-position: 0 -2190px;  }
+.flair-maka{ content: ""; background-position: 0 -2220px;  }
+.flair-deis{ content: ""; background-position: 0 -2250px;  }
+.flair-toni{ content: ""; background-position: 0 -2280px;  }
+.flair-olic{ content: ""; background-position: 0 -2310px;  }
+.flair-bomm{ content: ""; background-position: 0 -2340px; }
+.flair-klos{ content: ""; background-position: 0 -2370px;  }
+.flair-31{ content: ""; background-position: 0 -2400px;  }
+.flair-gome{ content: ""; background-position: 0 -2430px; }
+.flair-kroo{ content: ""; background-position: 0 -2460px;  }
+.flair-janc{ content: ""; background-position: 0 -2490px;  }
+.flair-zick{ content: ""; background-position: 0 -2520px;  }
+
+.side .tagline .flairselector {
+    position: absolute;
+    left: -220px!important;
+}
+
+.side .tagline .flairselector .flairremove {
+    line-height: 25px;
+    margin-left: 5px;
+}
+
+
+/* Reddit Enhancement Suite
+--------------------------------------------------------------------- */
+.comments-page .RES-keyNav-activeElement,
+.listing-page .RES-keyNav-activeElement,
+.res-nightmode .link.stickied, .res-nightmode .listing-page .link.stickied:hover {
+    background: none !important;
+}
