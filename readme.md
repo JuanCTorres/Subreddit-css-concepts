@@ -13,3 +13,7 @@ This concept has been inspired by both the new App Store in iOS11, and Udacity's
 * Fix main header for both text only and image headers.
 * Fix submit new link/text page. See #3 for more details.
 * Fix subscribe button on the sidebar. See #4 for more details.
+
+## Preview of current state
+
+![Current state](preview_unfinished_092017.png)
