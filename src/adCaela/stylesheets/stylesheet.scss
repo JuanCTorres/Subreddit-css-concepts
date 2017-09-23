@@ -135,7 +135,9 @@ ul.content li {
 
 }
 
-.res-fancy-toggle-button
+.res-fancy-toggle-button {
+
+}
   /* search expando, etc. */
 .infobar {
   border: none;
@@ -309,8 +311,8 @@ body > .content .link .midcol, .midcol-spacer {
   background-color: transparent;
   text-align: left;
   position: absolute;
-  left: 0px;
-  right: 0px;
+  left: 0;
+  right: 0;
   top: 156px;
   padding-left: 15px;
 }
