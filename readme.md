@@ -16,4 +16,4 @@ This concept has been inspired by both the new App Store in iOS11, and Udacity's
 
 ## Preview of current state
 
-![Current state](preview_unfinished_092017.png)
+![Current state](media/preview_unfinished_092017.png)
